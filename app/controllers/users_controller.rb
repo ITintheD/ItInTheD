@@ -3,9 +3,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-
-    raise  User.where(:first_name => "Chris").to_sql.inspect
-
     respond_to do |format|
       format.html
       format.json { render json: @users }
