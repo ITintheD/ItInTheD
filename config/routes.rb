@@ -1,4 +1,6 @@
 ItInTheD::Application.routes.draw do
+  devise_for :users
+
   resources :users
 
   # match '/person/:id' => 'users#show'
