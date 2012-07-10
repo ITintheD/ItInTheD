@@ -1,9 +1,13 @@
 ItInTheD::Application.routes.draw do
-<<<<<<< HEAD
+
+
   resources :organizations
-=======
+
+
+ 
   devise_for :users
->>>>>>> b051f8c3af622a6c7253077ae68875c55c7329b8
+
+
 
   resources :users
 
