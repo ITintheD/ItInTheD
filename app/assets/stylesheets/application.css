@@ -11,3 +11,27 @@
  *= require_self
  *= require_tree .
 */
+
+#top_navbar {
+	margin-bottom: 10px;
+	padding-left: 25px;
+}
+
+.events {
+	border: 1px solid #ccc;
+	margin-top: 20px;
+	padding: 5px;
+}
+
+.stories {
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+footer {
+	padding: 20px;
+}
+
+.social {
+	float: right;
+}
