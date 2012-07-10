@@ -1,4 +1,6 @@
 ItInTheD::Application.routes.draw do
+  resources :organizations
+
   resources :users
 
   # match '/person/:id' => 'users#show'
