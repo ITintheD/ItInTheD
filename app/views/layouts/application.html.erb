@@ -7,8 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class='container'>
+		<header style='height:150px;' class='row'>
+			<div class='span2'>
+				User <br>
+				Login <br>
+				Register<br>
+			</div>
+			<div class='span7'>
+				<h1 style='text-align:center;'>IT in the D</h1>
+			</div>
+			<div class='span3'>
+				<form>
+					<input type='search' placeholder='search'>
+				</form>
+			</div>
 
-<%= yield %>
+		</header>
+		<nav class='row'>
 
+		</nav>
+		
+		<%= yield %>
+		
+		<footer class='footer row'>
+
+		</footer>
+	</div>
 </body>
 </html>
