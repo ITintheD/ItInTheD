@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -24,29 +24,23 @@
       </div>
     </div>
 
-<header class='row' style="margin-top:60px;">
 
-	<div class='span2'>
-		User <br/>
-		Login <br/>
-		Register<br/>
-=======
-<header class='row'>
+<header class='row' style="margin-top:60px;">
 	<div class='span3'>
 	<%-if user_signed_in?%>
-		<%= "Welcome, 
-		#{current_user.first_name} 
+		<%= "Welcome,
+		#{current_user.first_name}
 		#{current_user.last_name}" %>
 		<br>
   	  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
 	<%-else %>
 		Welcome Guest <br>
   	  <%= link_to "Sign in", new_user_session_path %>
-	  <br> 
+	  <br>
 	  <%= link_to 'Register', new_user_registration_path %>
 	<%end%>
 <br>
->>>>>>> c0673c7b0249182a4d874a418338330b81af4f22
+
 	</div>
 	<div class='span7'>
 		<h1 style='text-align:center;'>
