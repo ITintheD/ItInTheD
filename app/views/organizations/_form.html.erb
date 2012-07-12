@@ -43,6 +43,16 @@
     <%= f.label :web_link %><br />
     <%= f.text_field :web_link %>
   </div>
+
+  <div class="field">
+    <%= f.label :keyword %><br />
+		<%= f.text_field :keyword_list %>
+  </div>
+
+	<div class="field">
+		<%= f.label 'Organization Type' %>
+		<%= f.collection_select(:org_type_id, OrgType.all, :id, :name) %>
+	</div>
   <div class="actions">
     <%= f.submit %>
   </div>
