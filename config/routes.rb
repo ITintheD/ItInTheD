@@ -4,14 +4,9 @@ ItInTheD::Application.routes.draw do
   resources :org_types
 
   resources :organizations
-
-
- 
   devise_for :users
 
-
-
-  resources :users
+  #resources :users
 
   # match '/person/:id' => 'users#show'
 

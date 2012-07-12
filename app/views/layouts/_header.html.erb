@@ -1,8 +1,46 @@
-<header class='row'>
-	<div class='span2'>
-		User <br/>
-		Login <br/>
-		Register<br/>
+
+   <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">It In The D</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#whatsh">Happening in Detroit</a></li>
+              <li><a href="#jobseeker">Job Seekers</a></li>
+              <li><a href="#whatsh">Post a job</a></li>
+              <li><a href="#det2020">Detroit 2020</a></li>
+              <li><a href="#affiliate">Affiliates</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+<header class='row' style="margin-top:60px;">
+	<div class='span3'>
+	<%-if user_signed_in?%>
+		<%= "Welcome,
+		#{current_user.first_name}
+		#{current_user.last_name}" %>
+		<br>
+  	  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+	<%-else %>
+		Welcome Guest <br>
+  	  <%= link_to "Sign in", new_user_session_path %>
+	  <br>
+	  <%= link_to 'Register', new_user_registration_path %>
+	<%end%>
+<br>
+
 	</div>
 	<div class='span7'>
 		<h1 style='text-align:center;'>

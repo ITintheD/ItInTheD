@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title><%= @title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <% javascript_include_tag "bootstrap-dropdown.js"%>
+  <script src="/app/assets/javascript/bootstrap-dropdown.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,9 +15,9 @@
 		<nav class='row' id="top_navbar">
 			NAV BAR
 		</nav>
-		
+
 		<%= yield %>
-		
+
 		<%= render :partial => '/layouts/footer' %>
 	</div>
 </body>
