@@ -18,6 +18,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'acts-as-taggable-on', '~> 2.3.1'
 end
 
 gem 'jquery-rails'
