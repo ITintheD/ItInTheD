@@ -1,13 +1,29 @@
 
    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">It In The D</a>
+          <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user"></i>Username
+                  <span class="caret"></span>
+                </a>
+                 <ul class="dropdown-menu">
+                  <a href="#">Sign In</a>
+                  <li>                    
+                    <a href="#">Registrate</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">Sign Out</a>
+                  </li>
+                </ul>
+              </div>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -15,11 +31,16 @@
               <li><a href="#jobseeker">Job Seekers</a></li>
               <li><a href="#whatsh">Post a job</a></li>
               <li><a href="#det2020">Detroit 2020</a></li>
-              <li><a href="#affiliate">Affiliates</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+            <div class='span3 round' style="margin-bottom:-20px; margin-top:4px;">
+           <form>
+            <input type='search' placeholder='search'>
+          </form>
+          </div><!--/.nav-collapse -->  
+
+  </div>     
         </div>
       </div>
     </div>
@@ -47,9 +68,5 @@
 			<%= link_to(image_tag('main_logo.png'), '/') %>
 		</h1>
 	</div>
-	<div class='span3'>
-		<form>
-			<input type='search' placeholder='search'>
-		</form>
-	</div>
+	
 </header>
