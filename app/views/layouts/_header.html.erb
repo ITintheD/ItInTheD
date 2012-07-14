@@ -47,26 +47,6 @@
 
 
 <header class='row' style="margin-top:60px;">
-	<div class='span3'>
-	<%-if user_signed_in?%>
-		<%= "Welcome,
-		#{current_user.first_name}
-		#{current_user.last_name}" %>
-		<br>
-  	  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-	<%-else %>
-		Welcome Guest <br>
-  	  <%= link_to "Sign in", new_user_session_path %>
-	  <br>
-	  <%= link_to 'Register', new_user_registration_path %>
-	<%end%>
-<br>
 
-	</div>
-	<div class='span7'>
-		<h1 style='text-align:center;'>
-			<%= link_to(image_tag('main_logo.png'), '/') %>
-		</h1>
-	</div>
 	
 </header>

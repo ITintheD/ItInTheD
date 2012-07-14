@@ -4450,7 +4450,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .thumbnails {
-  margin-left: -20px;
+  margin-left: 50px;
   list-style: none;
   *zoom: 1;
 }
