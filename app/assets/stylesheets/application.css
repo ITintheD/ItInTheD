@@ -35,3 +35,7 @@ footer {
 .social {
 	float: right;
 }
+
+.hero-unit h1 {
+	font-size: 30pt !important;
+}
