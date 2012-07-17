@@ -51,3 +51,8 @@ footer {
 .aside_section {
 	margin-bottom: 50px;
 }
+
+#top_navmenu {
+	width: 1200px;
+	margin: auto;
+}
