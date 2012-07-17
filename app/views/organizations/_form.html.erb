@@ -13,57 +13,75 @@
 
   <div class="control-group">
     <%= f.label :name, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :name %>
+         <div class="controls">
+        <%= f.text_field :name %>
+      </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :address, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :address %>
+         <div class="controls">
+        <%= f.text_field :address %>
+    </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :city, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :city %>
+         <div class="controls">
+        <%= f.text_field :city %>
+    </div>
   </div>
-  <div class="control-group">
-    <%= f.label :zip, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :zip %>
+  
+      <div class="control-group">
+        <%= f.label :zip, :class=> "control-label" %>
+    <div class="controls">
+        <%= f.text_field :zip %>
+    </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :lat, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :lat %>
+         <div class="controls">
+        <%= f.text_field :lat %>
+    </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :long, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :long %>
+         <div class="controls">
+        <%= f.text_field :long %>
+    </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :org_url, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_url %>
+         <div class="controls">
+        <%= f.text_field :org_url %>
+    </div>
   </div>
+  
   <div class="control-group">
     <%= f.label :web_link, :class=> "control-label" %>
      <div class="controls">
     <%= f.text_field :web_link %>
   </div>
+</div>
 
   <div class="control-group">
     <%= f.label :keyword, :class=> "control-label" %>
      <div class="controls">
-		<%= f.text_field :keyword_list %>
+    <%= f.text_field :keyword_list %>
   </div>
+</div>
 
 	<div class="control-group">
 		<%= f.label 'Organization Type', :class=> "control-label" %>
      <div class="controls">
 		<%= f.collection_select(:org_type_id, OrgType.all, :id, :name) %>
 	</div>
+    </div>
+   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
   </div>
 <% end %>
