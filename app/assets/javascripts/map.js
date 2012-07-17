@@ -46,6 +46,7 @@ function initialize() {
 	);
 
 	addCompanies(map);
+	addEvents(map);
 }
 
 
@@ -55,4 +56,8 @@ function addCompanies(map) {
       map: map,
       title:"Compuware"
   });
+}
+
+function addEvents(map) {
+	
 }
