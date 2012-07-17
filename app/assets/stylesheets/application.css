@@ -39,3 +39,15 @@ footer {
 .hero-unit h1 {
 	font-size: 30pt !important;
 }
+
+.social_btn {
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+	background-color: #ccc;
+}
+
+.aside_section {
+	margin-bottom: 50px;
+}
