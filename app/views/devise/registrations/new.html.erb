@@ -40,16 +40,13 @@
 	  		</div>	
 	  	</div>	
 	 
-</fieldset>
+
 
 	<div class="form-actions">
-        <button type="submit" class="btn btn-primary">
-        	Sign Up
-        </button>
-        <button type="cancel"  class="btn btn">
-        	Cancel
-        </button>
+  			<%= f.submit "Submit", :class => "btn btn-primary" %>
+  			<%= link_to "Cancel", root_path ,:class => "btn btn" %>
     </div>
+    </fieldset>
 <% end %>
 
 <%= render "devise/shared/links" %>

@@ -4,17 +4,17 @@ ItInTheD::Application.routes.draw do
   resources :org_types
 
   resources :organizations
-  devise_for :users
+  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout'}
 
   #resources :users
 
   # match '/person/:id' => 'users#show'
 
-  # match '/people' => 'users#index'
-
+  match '/people' => 'users#index', :as => :people
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
