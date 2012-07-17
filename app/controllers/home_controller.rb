@@ -4,4 +4,9 @@ class HomeController < ApplicationController
     @title = 'IT in the D Home Page'
   end
   
+  
+  def map
+    
+  end
+  
 end
