@@ -81,6 +81,7 @@ function addEvents(map) {
 	marker.setAnimation(google.maps.Animation.BOUNCE);
 	google.maps.event.addListener(marker,'click',function(){
 		infowindow.open(map,marker);
+		marker.setAnimation(null);
 	})
   
 	
