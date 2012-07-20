@@ -52,13 +52,14 @@ function initialize() {
 
 
 function addCompanies(map) {
+	
   var marker = new google.maps.Marker({
       position: new google.maps.LatLng(42.332566,-83.046856),
       map: map,
-      title:"Compuware"
+      title: "Compuware"
   });
   var marker = new google.maps.Marker({
-  	position: new google.maps.LatLng (42.338753, -83.048115),
+  	position: new google.maps.LatLng(42.338753, -83.048115),
   	map: map,
   	title: "Quicken Loans"
   });
@@ -70,13 +71,17 @@ function addEvents(map) {
 		content: event,
 		size: new google.maps.Size(50,50)
 	});
+	var image = '/assets/purple-dot.png';
 	var marker = new google.maps.Marker({
       position: new google.maps.LatLng(42.332566,-83.046856),
       map: map,
+      icon: image,
       title:"Compuware"
-  });
+        });
+	marker.setAnimation(google.maps.Animation.BOUNCE);
 	google.maps.event.addListener(marker,'click',function(){
 		infowindow.open(map,marker);
+		marker.setAnimation(null);
 	})
   
 	
@@ -96,4 +101,17 @@ function addUniversities(map){
 		icon: image,
 		title: "Wayne County Community College"
 	});
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(42.318987, -83.234576),
+		map: map,
+		icon: image,
+		title: "University of Detroit Mercy"
+	});
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(42.34332, -83.088627),
+		map: map,
+		icon: image,
+		title: "University of Detroit Mercy"
+	});
+	
 }
