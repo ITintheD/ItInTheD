@@ -14,3 +14,6 @@
 /log/*.log
 /tmp
 /nbproject/private/
+
+# Remove useless system files 
+.DS_Store
