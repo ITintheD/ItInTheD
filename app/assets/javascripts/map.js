@@ -46,11 +46,11 @@ function initialize() {
 	);
 
 
-	var georssLayer = new google.maps.KmlLayer('https://sites.google.com/site/itinthedmap/kml-files/My%20Places_ItInTheD.kmz?attredirects=0&d=1');
-	georssLayer.setMap(map);
+	<!--var georssLayer = new google.maps.KmlLayer('https://sites.google.com/site/itinthedmap/kml-files/My%20Places_ItInTheD.kmz?attredirects=0&d=1');-->
+	//georssLayer.setMap(map);
 
  	addCompanies(map);
-	// addEvents(map);
+	addEvents(map);
 	 addUniversities(map);
 
 }
