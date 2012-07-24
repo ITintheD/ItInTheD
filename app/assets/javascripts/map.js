@@ -45,19 +45,28 @@ function initialize() {
 		myOptions
 	);
 
-	addCompanies(map);
+	<!--addCompanies(map);-->
 	addEvents(map);
-	addUniversities(map);
+	<!--addUniversities(map);-->
+
+	var georssLayer = new google.maps.KmlLayer('https://sites.google.com/site/itinthedmap/kml-files/My%20Places_ItInTheD.kmz?attredirects=0&d=1');
+	georssLayer.setMap(map);
 }
 
 
 function addCompanies(map) {
+
 	
   var marker = new google.maps.Marker({
       position: new google.maps.LatLng(42.332566,-83.046856),
       map: map,
-      title: "Compuware"
+      title: "Compuware",
+      
+  
   });
+  
+
+  
   var marker = new google.maps.Marker({
   	position: new google.maps.LatLng(42.338753, -83.048115),
   	map: map,
@@ -66,10 +75,21 @@ function addCompanies(map) {
 }
 
 function addEvents(map) {
-	var event ="Mobile Monday Detroit";
+	
+	var event ='<div id="content">'+
+    '<div id="siteNotice">'+
+    '</div>'+
+    '<h2 id="firstHeading" class="firstHeading">Mobile Monday Detroit</h2>'+
+    '<div id="bodyContent">'+
+    '<img src="/assets/compuware building.png" alt="compuware" height="42" width="42" />'+
+    '<p><a href="http://www.meetup.com/Mobile-Monday-Detroit/events/65925102/?gj=wc2d_e&a=wc2d_gnl&rv=wc2d_e">'+
+    'http://www.meetup.com/Mobile-Monday-Detroit/events/65925102/?gj=wc2d_e&a=wc2d_gnl&rv=wc2d_e</a> (July 16, 2012 5:30 PM - 8:00 PM in Compuware Building).</p>'+
+    '</div>'+
+    '</div>';
+
 	var infowindow = new google.maps.InfoWindow({
 		content: event,
-		size: new google.maps.Size(50,50)
+		size: new google.maps.Size(42,100)
 	});
 	var image = '/assets/purple-dot.png';
 	var marker = new google.maps.Marker({
@@ -82,8 +102,7 @@ function addEvents(map) {
 	google.maps.event.addListener(marker,'click',function(){
 		infowindow.open(map,marker);
 		marker.setAnimation(null);
-	})
-  
+	}); 
 	
 }
 function addUniversities(map){
