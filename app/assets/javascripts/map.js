@@ -116,11 +116,12 @@ function addEvents(map) {
       icon: image,
       title:"Compuware"
         });
-	//marker.setAnimation(google.maps.Animation.BOUNCE);
+
+	marker.setAnimation(google.maps.Animation.DROP);
 	google.maps.event.addListener(marker,'click',function(){
 		infowindow.open(map,marker);
-		marker.setAnimation(null);
-	});
+		//marker.setAnimation(null);
+	}); 
 
 }
 function addUniversities(map){
