@@ -10,6 +10,7 @@ ItInTheD::Application.routes.draw do
 
   # match '/person/:id' => 'users#show'
 
+  match '/users/show/:id' => 'users#show'
   match '/people' => 'users#index', :as => :people
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

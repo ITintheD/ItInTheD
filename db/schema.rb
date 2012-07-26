@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120726194928) do
+
+ActiveRecord::Schema.define(:version => 20120726200836) do
+
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
@@ -29,9 +31,16 @@ ActiveRecord::Schema.define(:version => 20120726194928) do
     t.float    "long"
     t.string   "org_url"
     t.string   "web_link"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.integer  "org_type_id"
+    t.string   "org_logo"
+    t.integer  "org_num_students_employ"
+    t.string   "org_start_year"
+    t.integer  "org_annual_sales"
+    t.string   "org_optional_stat_a"
+    t.string   "org_optional_stat_b"
+    t.string   "org_optional_stat_c"
   end
 
   create_table "taggings", :force => true do |t|
