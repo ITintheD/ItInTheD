@@ -10,21 +10,23 @@
           <a class="brand" href="#">It In The D</a>
           <div class="btn-group pull-right">
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                  <i class="icon-user"></i>Username
+                  <i class="icon-user"></i>
+                 <%-if user_signed_in?%>
+					<%= current_user.email %>  
+                  <%-else %>
+  					Guest
+    			<%end%>
+                  
                   <span class="caret"></span>
                 </a>
                  <ul class="dropdown-menu">
-                  <!--<a href="#">Sign In</a>-->
-                  <%= link_to "Login", new_user_session_path %>
-                  <li>                    
-                    <!--<a href="#">Register</a>-->
-                    <%= link_to "Sign Up",new_user_registration_path%>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <!--<a href="#">Sign Out</a>-->
-                    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-                  </li>
+                 <%-if user_signed_in?%>
+					<li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %> </li>  
+                  <%-else %>
+  					<li> <%= link_to "Login", new_user_session_path %></li>
+                    <li> <%= link_to "Sign Up",new_user_registration_path%> </li>
+  				<%end%> 
+                  
                 </ul>
               </div>
           <div class="nav-collapse">
@@ -32,7 +34,7 @@
               <li class="active"><a href="/"><i class="icon-home"></i>Home</a></li>
               <li><a href="#news">News</a></li>
               <li><a href="#events">Events</a></li>
-              <li><a href="#companies">Companies</a></li>
+              <li><a href="/organizations">Companies</a></li>
               <li><a href="/home/about">About</a></li>
               <li><a href="/home/contact">Contact</a></li>
             </ul>
