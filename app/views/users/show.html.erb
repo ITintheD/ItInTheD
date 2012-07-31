@@ -1,45 +1,29 @@
+
 <p id="notice"><%= notice %></p>
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "form-horizontal"}) do |f| %>
-
-<fieldset>
-	  	<div class="control-group">
-	   		<%= f.label :first_name, :class => "control-label" %>
-	  		<div class="controls">
-	  			<%= f.text_field :first_name %>
-	  		</div>	
-	  	</div>
-
-	  	<div class="control-group">
-	   		<%= f.label :last_name, :class => "control-label" %>
-	  		<div class="controls">
-	  			<%= f.text_field :last_name %>
-	  		</div>	
-	  	</div>
-
-	  	<div class="control-group">
-	   		<%= f.label :email, :class => "control-label" %>
-	  		<div class="controls">
-	  			<%= f.email_field :email %>
-	  		</div>	
-	  	</div>
-</fieldset>
-<% end %>
-
 <p>
-  <b>First name:</b>
-  <%= @user.first_name %>
+  <b>Image:</b>
+  <%= @user.image %>
 </p>
 
 <p>
-  <b>Last name:</b>
-  <%= @user.last_name %>
+  <b>Name:</b>
+  <%= "#{@user.first_name} #{@user.last_name}" %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Header:</b>
+  <%= @user.header %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @user.location %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @user.summary %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
