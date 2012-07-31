@@ -4,20 +4,19 @@ set :repository,  "git@github.com:Compuware/ItInTheD.git"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "ec2-50-16-38-11.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
-role :app, "ec2-50-16-38-11.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
+role :web, "ec2-75-101-241-115.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
+role :app, "ec2-75-101-241-115.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
 # role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
-set :deploy_to, "/home/ubuntu/"
+set :deploy_to, "/home/ec2-user/rails"
 
-set :user, "ubuntu"
+set :user, "ec2-user"
 default_run_options[:pty] = true
 ssh_options[:keys] = ["#{ENV['HOME']}/Desktop/ItInTheD.pem"]
 
-# set :deploy_via, :remote_cache
-# set :repository_cache, "copy_of_your_checkout_instance"
-# set :keep_releases, 3
+set :deploy_via, :remote_cache
+set :keep_releases, 3
 
 
 
