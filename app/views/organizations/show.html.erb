@@ -2,13 +2,15 @@
 <p id="notice"><%= notice %></p>
 
   <div class="row-fluid">
-        <div class="span2" style="background-color: rgb(217, 237, 247);">
+        <div class="span3" style="background-color: rgb(217, 237, 247);">
           <!--Sidebar content-->
           
-          <p> Logo goes here</p>
+                <a href=<%= @organization.org_url %> >
+                <img style="padding: 5px" src="/assets/compuware logo small.png" alt="rss feed">
+                </a>
           
         </div>
-            <div class="span10">
+            <div class="span9">
               <!--Body content-->
                     <p>
                       <h2><%= @organization.name %></h2>
@@ -33,13 +35,21 @@
               </div>
 
   <div class="row-fluid">
-        <div class="span2" style="background-color: rgb(217, 237, 247);">
+        <div class="span3" style="background-color: rgb(217, 237, 247);  border-style:solid;
+            border-width:1px; border-color:black">
           <!--Sidebar2 content-->
           
-          <p> Financial info goes here</p>
+          <p><em> At a glance:</em></p>
+            
+            <p> Year established:</p>  
+              
+            <p> Number in Organization:</p>
+        
+            <p> Annual Income:</p>
+        
           
         </div>
-            <div class="span10">
+            <div class="span9">
               <!--Body 2 content-->
                     <p>             
                       <strong>Organization supplied content goes here</strong>
@@ -54,12 +64,12 @@
         <!--space for columns-->
         </div>
         
-            <div class="span10">
+            <div class="span9">
             <p>
                 <strong>Jobs and roles info goes here</strong>
             </p>
       </div>
-
+</div>
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
