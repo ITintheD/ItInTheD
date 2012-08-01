@@ -79,7 +79,13 @@
      <div class="controls">
 		<%= f.collection_select(:org_type_id, OrgType.all, :id, :name) %>
 	</div>
-    </div>
+</div>
+		
+		<div class="control-group">
+	    <label>My Logo</label>
+	    <%= f.file_field :logo %>
+	  </div>
+	</div>
    
   <div class="actions">
     <%= f.submit ' Submit ', :class=> "btn btn-primary" %>

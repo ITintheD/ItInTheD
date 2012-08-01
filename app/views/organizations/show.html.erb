@@ -1,54 +1,75 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @organization.name %>
-</p>
+  <div class="row-fluid">
+        <div class="span3" style="background-color: rgb(217, 237, 247);">
+          <!--Sidebar content-->
+          
+                <a href=<%= @organization.org_url %> >
+                <img style="padding: 5px" src="/assets/compuware logo small.png" alt="rss feed">
+                </a>
+          
+        </div>
+            <div class="span9">
+              <!--Body content-->
+                    <p>
+                      <h2><%= @organization.name %></h2>
+                    </p>
 
-<p>
-  <b>Address:</b>
-  <%= @organization.address %>
-</p>
+                    <p>
+                       <%= @organization.address %>
+                    </p>
 
-<p>
-  <b>City:</b>
-  <%= @organization.city %>
-</p>
+                    <p>
+                       <%= @organization.city %>
+                    </p>
 
-<p>
-  <b>Zip:</b>
-  <%= @organization.zip %>
-</p>
+                    <p>
+                        <%= @organization.zip %>
+                    </p> 
+                
+                    <p>
+                        <%= @organization.org_url %>
+                    </p>
+              
+              </div>
 
-<p>
-  <b>Lat:</b>
-  <%= @organization.lat %>
-</p>
+  <div class="row-fluid">
+        <div class="span3" style="background-color: rgb(217, 237, 247);  border-style:solid;
+            border-width:1px; border-color:black">
+          <!--Sidebar2 content-->
+          
+          <p><em> At a glance:</em></p>
+            
+            <p> Year established:</p>  
+              
+            <p> Number in Organization:</p>
+        
+            <p> Annual Income:</p>
+        
+          
+        </div>
+            <div class="span9">
+              <!--Body 2 content-->
+                    <p>             
+                      <strong>Organization supplied content goes here</strong>
+                    </p>
+            </div>
+  
 
-<p>
-  <b>Long:</b>
-  <%= @organization.long %>
-</p>
 
-<p>
-  <b>Org url:</b>
-  <%= @organization.org_url %>
-</p>
 
-<p>
-  <b>Web link:</b>
-  <%= @organization.web_link %>
-</p>
-
-<p>
-	<b>Keywords:</b>
-	<%= @organization.keyword_list %>
-</p>
-
-<p>
-	<b>Organization Type:</b>
-	<%= @organization.org_type.name %>
-</p>
+<div class="row-fluid">
+        <div class="span2" >
+        <!--space for columns-->
+        </div>
+        
+            <div class="span9">
+            <p>
+                <strong>Jobs and roles info goes here</strong>
+            </p>
+      </div>
+</div>
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>

@@ -7,8 +7,12 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 gem 'devise'
+<<<<<<< HEAD
 
 
+=======
+gem 'carrierwave'
+>>>>>>> f98516b4e3b774b0c296c58c2e0a0044de1659fa
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,7 +29,7 @@ end
 gem 'jquery-rails'
 
 #gem 'rmagick'
-gem 'carrierwave'
+#gem 'carrierwave'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
