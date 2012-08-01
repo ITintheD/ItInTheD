@@ -11,9 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20120726200836) do
-
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
