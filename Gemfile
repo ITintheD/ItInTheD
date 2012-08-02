@@ -16,6 +16,7 @@ end
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'jquery-rails'
 gem 'carrierwave'
+
 group :development 	do
 	gem 'capistrano'
 end
