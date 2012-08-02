@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731204834) do
+ActiveRecord::Schema.define(:version => 20120802210221) do
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(:version => 20120731204834) do
     t.string   "org_optional_stat_b"
     t.string   "org_optional_stat_c"
     t.string   "logo"
+    t.string   "org_job"
+    t.string   "org_phone"
+    t.string   "org_state"
   end
 
   create_table "taggings", :force => true do |t|
