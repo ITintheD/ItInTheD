@@ -15,5 +15,6 @@
 /tmp
 /nbproject/private/
 
-# Remove useless system files 
+# Remove useless system files
 .DS_Store
+.rvmrc
