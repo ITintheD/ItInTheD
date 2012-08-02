@@ -25,14 +25,11 @@ class OrganizationsController < ApplicationController
   # GET /organizations/new.json
   def new
     @organization = Organization.new
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @organization }
     end
-  end
-  
-  def new_logo
-    @uploader = LogoUploader.new
   end
 
   # GET /organizations/1/edit
