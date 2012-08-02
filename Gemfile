@@ -15,7 +15,7 @@ end
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'jquery-rails'
-gem 'carrierwave'
+gem 'paperclip'
 
 group :development 	do
 	gem 'capistrano'
