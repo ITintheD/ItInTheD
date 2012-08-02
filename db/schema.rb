@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120731204834) do
+=======
+ActiveRecord::Schema.define(:version => 20120726200836) do
+>>>>>>> ca0da1754f0805654ed3c0ab0108c120a5d489b3
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
@@ -39,7 +43,10 @@ ActiveRecord::Schema.define(:version => 20120731204834) do
     t.string   "org_optional_stat_a"
     t.string   "org_optional_stat_b"
     t.string   "org_optional_stat_c"
+<<<<<<< HEAD
     t.string   "logo"
+=======
+>>>>>>> ca0da1754f0805654ed3c0ab0108c120a5d489b3
   end
 
   create_table "taggings", :force => true do |t|
