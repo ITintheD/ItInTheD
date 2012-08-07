@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Merge branch 'master' of github.com:Compuware/ItInTheD
 
 Conflicts:
@@ -48,4 +49,56 @@ Conflicts:
 #	modified:   db/schema.rb
 #
 
+=======
+Merge branch 'master' of github.com:Compuware/ItInTheD
+
+Conflicts:
+	app/models/organization.rb
+	app/views/organizations/show.html.erb
+	db/schema.rb
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 19 different commits each, respectively.
+#
+# Changes to be committed:
+#
+#	modified:   .DS_Store
+#	modified:   Capfile
+#	modified:   Gemfile
+#	modified:   Gemfile.lock
+#	modified:   app/.DS_Store
+#	modified:   app/assets/.DS_Store
+#	modified:   app/assets/javascripts/map.js
+#	deleted:    app/assets/javascripts/users.js.coffee
+#	modified:   app/assets/stylesheets/application.css.erb
+#	modified:   app/controllers/organizations_controller.rb
+#	modified:   app/models/organization.rb
+#	deleted:    app/uploaders/avatar_uploader.rb
+#	modified:   app/views/.DS_Store
+#	modified:   app/views/home/index.html.erb
+#	modified:   app/views/layouts/application.html.erb
+#	modified:   app/views/organizations/_form.html.erb
+#	modified:   app/views/organizations/edit.html.erb
+#	modified:   app/views/organizations/new.html.erb
+#	modified:   app/views/organizations/show.html.erb
+#	modified:   app/views/users/.DS_Store
+#	modified:   app/views/users/show.html.erb
+#	new file:   brfj1vst.scm.txt
+#	modified:   config/deploy.rb
+#	modified:   db/.DS_Store
+#	deleted:    db/migrate/20120731204834_add_details_to_organizations.rb
+#	new file:   db/migrate/20120802195613_add_attachment_logo_to_organization.rb
+#	modified:   db/schema.rb
+#
+
+>>>>>>> 6233c793f23ab55458316df2f7a828ef431c17cd
 sync files
