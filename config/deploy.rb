@@ -11,7 +11,7 @@ role :app, "ec2-75-101-241-115.compute-1.amazonaws.com"                         
 
 set :deploy_to, "/home/ec2-user/rails"
 
-set :user, "ec2-user"
+set :user, "ubuntu"
 default_run_options[:pty] = true
 ssh_options[:keys] = ["#{ENV['HOME']}/Desktop/ItInTheD.pem"]
 

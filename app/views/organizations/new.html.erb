@@ -4,6 +4,3 @@
 
 <%= link_to 'Back', organizations_path %>
 
-<%= form_for @organization, :url => organizations_path, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :logo %>
-<% end %>

@@ -1,4 +1,7 @@
-<%= form_for(@organization, :html => {:class => "form-horizontal"}) do |f| %>
+<%= form_for(@organization, :url => organizations_path,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
+  <%= f.file_field :logo %>
+
+
   <% if @organization.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
