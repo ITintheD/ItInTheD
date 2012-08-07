@@ -32,12 +32,34 @@
     </div>
   </div>
   
+    <div class="control-group">
+        <%= f.label :state, :class=> "control-label" %>
+    <div class="controls">
+        <%= f.text_field :org_state %>
+    </div>
+  </div>
+  
+  
+  
+  
       <div class="control-group">
         <%= f.label :zip, :class=> "control-label" %>
     <div class="controls">
         <%= f.text_field :zip %>
     </div>
   </div>
+  
+   <div class="control-group">
+        <%= f.label :Phone, :class=> "control-label" %>
+    <div class="controls">
+        <%= f.text_field :org_phone %>
+    </div>
+  </div>
+  
+  
+  
+  
+  
   
   <div class="control-group">
     <%= f.label :lat, :class=> "control-label" %>
@@ -73,6 +95,45 @@
     <%= f.text_field :keyword_list %>
   </div>
 </div>
+
+ <div class="control-group">
+    <%= f.label :number_in_organization, :class=> "control-label" %>
+     <div class="controls">
+    <%= f.text_field :org_num_students_employ %>
+  </div>
+</div>
+
+<div class="control-group">
+    <%= f.label :Year_established, :class=> "control-label" %>
+     <div class="controls">
+    <%= f.text_field :org_start_year %>
+  </div>
+</div>
+
+<div class="control-group">
+    <%= f.label :annual_sales, :class=> "control-label" %>
+     <div class="controls">
+    <%= f.text_field :org_annual_sales %>
+  </div>
+</div>
+
+<div class="control-group">
+    <%= f.label :organization_summary, :class=> "control-label" %>
+     <div class="controls">
+    <%= f.text_area :org_optional_stat_a %>
+  </div>
+</div>
+
+<div class="control-group">
+    <%= f.label :opportunities, :class=> "control-label" %>
+     <div class="controls">
+    <%= f.text_area :org_job %>
+  </div>
+</div>
+
+
+
+
 
 	<div class="control-group">
 		<%= f.label 'Organization Type', :class=> "control-label" %>
