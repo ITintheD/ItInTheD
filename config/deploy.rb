@@ -15,7 +15,7 @@ set :user, "ec2-user"
 default_run_options[:pty] = true
 ssh_options[:keys] = ["#{ENV['HOME']}/Desktop/ItInTheD.pem"]
 
-u set :deploy_via, :remote_cache
+# u set :deploy_via, :remote_cache
 set :keep_releases, 3
 
 

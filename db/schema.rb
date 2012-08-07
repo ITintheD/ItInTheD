@@ -43,6 +43,10 @@ ActiveRecord::Schema.define(:version => 20120802210221) do
     t.string   "org_job"
     t.string   "org_phone"
     t.string   "org_state"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "taggings", :force => true do |t|

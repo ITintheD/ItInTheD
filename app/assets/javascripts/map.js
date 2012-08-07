@@ -1,4 +1,3 @@
-
 function initialize() {
 	var myOptions = {
       center: new google.maps.LatLng(42.352931,-83.090286),
@@ -46,7 +45,6 @@ function initialize() {
 	);
 
 
-	<!--var georssLayer = new google.maps.KmlLayer('https://sites.google.com/site/itinthedmap/kml-files/My%20Places_ItInTheD.kmz?attredirects=0&d=1');-->
 	//georssLayer.setMap(map);
 
  	addCompanies(map);
@@ -121,7 +119,7 @@ function addEvents(map) {
 	google.maps.event.addListener(marker,'click',function(){
 		infowindow.open(map,marker);
 		//marker.setAnimation(null);
-	}); 
+	});
 
 }
 function addUniversities(map){
