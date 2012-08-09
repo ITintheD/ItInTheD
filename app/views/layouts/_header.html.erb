@@ -12,21 +12,21 @@
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                   <i class="icon-user"></i>
                  <%-if user_signed_in?%>
-					<%= current_user.email %>  
+					<%= current_user.email %>
                   <%-else %>
   					Guest
     			<%end%>
-                  
+
                   <span class="caret"></span>
                 </a>
                  <ul class="dropdown-menu">
                  <%-if user_signed_in?%>
-					<li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %> </li>  
+					<li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %> </li>
                   <%-else %>
   					<li> <%= link_to "Login", new_user_session_path %></li>
                     <li> <%= link_to "Sign Up",new_user_registration_path%> </li>
-  				<%end%> 
-                  
+  				<%end%>
+
                 </ul>
               </div>
           <div class="nav-collapse">
@@ -39,12 +39,15 @@
               <li><a href="/home/contact">Contact</a></li>
             </ul>
             <div class='span3 round' style="margin-bottom:-20px; margin-top:4px;">
-           <form>
-            <input type='search'  placeholder='search'>
-          </form>
-          </div><!--/.nav-collapse -->  
 
-  </div>     
+          <%= form_tag search_path, :method => :post do %>
+            <%= text_field :search_params, :q, :id => 'search', :placeholder => "search" %>
+          <%end%>
+
+
+          </div><!--/.nav-collapse -->
+
+  </div>
         </div>
       </div>
     </div>
@@ -52,5 +55,5 @@
 
 <header class='row' style="margin-top:60px;">
 
-	
+
 </header>
