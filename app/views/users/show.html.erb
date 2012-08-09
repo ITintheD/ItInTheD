@@ -1,29 +1,44 @@
 
 <p id="notice"><%= notice %></p>
-<p>
-  <b>Image:</b>
-  <%= @user.image %>
-</p>
+<div class="row-fluid">
+        <div class="span3" style="background-color: white;">
+          <!--Sidebar content-->
+          
+                <p>
+                  <b>Image:</b>
+                  <!--<%= image_tag @user.avatar.url %>
+                  <%= image_tag @user.avatar.url(:medium) %>-->
+                  <%= image_tag @user.avatar.url(:thumb) %>
+                  
+                  <!--<%= @user.image %>-->
+                </p> 
+                 <p>
+            <b>Name:</b>
+            <%= "#{@user.first_name} #{@user.last_name}" %>
+          </p>
 
-<p>
-  <b>Name:</b>
-  <%= "#{@user.first_name} #{@user.last_name}" %>
-</p>
+          <p>
+            <b>Email:</b>
+            <%= @user.email %>
+          </p>           
+          </div>
 
-<p>
-  <b>Header:</b>
-  <%= @user.header %>
-</p>
+ <div class="span9">
+              <!--Body 1 content-->
+      <p><strong> Summary </strong><p>
+      <p>             
+      <%= @user.summary %>
+      </p>
+</div>
 
-<p>
-  <b>Location:</b>
-  <%= @user.location %>
-</p>
+</div>
 
-<p>
-  <b>Summary:</b>
-  <%= @user.summary %>
-</p>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
+
+
 
 
 

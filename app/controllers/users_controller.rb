@@ -20,5 +20,8 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
-
+   def create
+    @user = User.create( params[:user] )
+   end
+  
 end
