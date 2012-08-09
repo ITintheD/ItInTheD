@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20120802210221) do
     t.string   "org_optional_stat_a"
     t.string   "org_optional_stat_b"
     t.string   "org_optional_stat_c"
+    t.string   "logo"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
