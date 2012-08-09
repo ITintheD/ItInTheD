@@ -23,8 +23,8 @@
     <td><%= user.last_name %></td>
     <td><%= user.email %></td>
     <td><%= user.image %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Show', show_people_path(user) %></td>
+    <td><%= link_to 'Edit', edit_people_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
