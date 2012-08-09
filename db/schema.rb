@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(:version => 20120809195235) do
     t.string   "org_optional_stat_a"
     t.string   "org_optional_stat_b"
     t.string   "org_optional_stat_c"
+<<<<<<< HEAD
+=======
+    t.string   "logo"
+>>>>>>> 675f5b4aad8caaa7037734ac0cd62461bafbcaca
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -87,11 +91,15 @@ ActiveRecord::Schema.define(:version => 20120809195235) do
     t.string   "header"
     t.string   "location"
     t.text     "summary"
+<<<<<<< HEAD
     t.string   "image"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+=======
+    t.string   "avatar"
+>>>>>>> 675f5b4aad8caaa7037734ac0cd62461bafbcaca
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
