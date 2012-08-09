@@ -9,14 +9,19 @@ ItInTheD::Application.routes.draw do
 
   # match '/person/:id' => 'users#show'
 
+<<<<<<< HEAD
+=======
   match '/search' => 'search#index', :as => :search
 
   match '/users/show/:id' => 'users#show'
+>>>>>>> 4533341343c0050e96418b4c7e3edc4a7816dd25
   match '/people' => 'users#index', :as => :people
   match '/people/show/:id' => 'users#show', :as => :show_people
   match '/people/edit/:id' => 'users#edit', :as => :edit_people
   
-  resources :users, :except => [:index, :show, :edit]
+  
+  
+  #resources :users, :except => [:index, :show]
   
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

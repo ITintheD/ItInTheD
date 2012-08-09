@@ -6,11 +6,8 @@
           
                 <p>
                   <b>Image:</b>
-                  <!--<%= image_tag @user.avatar.url %>
-                  <%= image_tag @user.avatar.url(:medium) %>-->
                   <%= image_tag @user.avatar.url(:thumb) %>
                   
-                  <!--<%= @user.image %>-->
                 </p> 
                  <p>
             <b>Name:</b>
@@ -33,7 +30,7 @@
 
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_people_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
 
