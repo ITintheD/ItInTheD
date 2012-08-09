@@ -1,16 +1,18 @@
-<<<<<<< HEAD
-
 <p id="notice"><%= notice %></p>
 
   <div class="row-fluid">
-        <div class="span3" style="background-color: rgb(217, 237, 247);">
+        <div class="span3" style="background-color: white;">
           <!--Sidebar content-->
           
                 <a href=<%= @organization.org_url %> >
-                <img style="padding: 5px" src="/assets/compuware logo small.png" alt="rss feed">
+                <!--<%= image_tag @organization.logo.url%>
+                <%= image_tag @organization.logo.url(:medium) %>-->
+                <%= image_tag @organization.logo.url(:thumb) %>
                 </a>
+                
           
         </div>
+
             <div class="span9">
               <!--Body content-->
                     <p>
@@ -18,11 +20,11 @@
                     </p>
 
                     <p>
-                       <%= @organization.address %>
-                    </p>
-
+                      <%= @organization.address %>
+                    </P>
+                    
                     <p>
-                       <%= @organization.city %>, <%= @organization.org_state %> <%= @organization.zip %>
+                       <%= @organization.city %>,<%= @organization.org_state %> <%= @organization.zip %>
                     </p> 
                 
                  <p>
@@ -36,8 +38,7 @@
                     </p>
               
               </div>
-
-  <div class="row-fluid">
+     <div class="row-fluid">
         <div class="span3" style="background-color: rgb(217, 237, 247);  border-style:solid;
             border-width:1px; border-color:black">
           <!--Sidebar2 content-->
@@ -52,6 +53,7 @@
         
           
         </div>
+ 
             <div class="span9">
               <!--Body 2 content-->
                 <p><strong> Summary </strong><p>
@@ -79,63 +81,14 @@
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
-=======
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @organization.name %>
-</p>
 
-<p>
-  <b>Address:</b>
-  <%= @organization.address %>
-</p>
 
-<p>
-  <b>City:</b>
-  <%= @organization.city %>
-</p>
 
-<p>
-  <b>Zip:</b>
-  <%= @organization.zip %>
-</p>
+<!--
+<%#= image_tag @organization.logo.url %>
+<%#= image_tag @organization.logo.url(:medium) %>
+<%#= image_tag @organization.logo.url(:thumb) %>
+-->
 
-<p>
-  <b>Lat:</b>
-  <%= @organization.lat %>
-</p>
 
-<p>
-  <b>Long:</b>
-  <%= @organization.long %>
-</p>
-
-<p>
-  <b>Org url:</b>
-  <%= @organization.org_url %>
-</p>
-
-<p>
-  <b>Web link:</b>
-  <%= @organization.web_link %>
-</p>
-
-<p>
-	<b>Keywords:</b>
-	<%= @organization.keyword_list %>
-</p>
-
-<p>
-	<b>Organization Type:</b>
-	<%= @organization.org_type.name %>
-</p>
-
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
-
-<%= image_tag @organization.logo.url %>
-<%= image_tag @organization.logo.url(:medium) %>
-<%= image_tag @organization.logo.url(:thumb) %>
->>>>>>> c4ff96d5c05b529d72e34735c7c2fdf80f24b2fb
