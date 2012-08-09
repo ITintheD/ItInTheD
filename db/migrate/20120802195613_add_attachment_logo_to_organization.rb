@@ -4,7 +4,6 @@ class AddAttachmentLogoToOrganization < ActiveRecord::Migration
     add_column :organizations, :logo_content_type, :string
     add_column :organizations, :logo_file_size, :integer
     add_column :organizations, :logo_updated_at, :datetime
-
   end
 
   def self.down

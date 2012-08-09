@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20120802210221) do
     t.string   "header"
     t.string   "location"
     t.text     "summary"
-    t.string   "image"
+    t.string   "avatar"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
