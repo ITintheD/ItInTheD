@@ -16,22 +16,25 @@
             <div class="span9">
               <!--Body content-->
                     <p>
-                      <h2>Organization Name:<%= @organization.name %></h2>
+                      <h2><%= @organization.name %></h2>
                     </p>
 
                     <p>
-                       Organization Address:<%= @organization.address %>,
+                      <%= @organization.address %>
+                    </P>
+                    
+                    <p>
                        <%= @organization.city %>,<%= @organization.org_state %> <%= @organization.zip %>
                     </p> 
                 
                  <p>
-                        Contact Phone Number:<%= @organization.org_phone %>
+                        <%= @organization.org_phone %>
                     </p>
                 
                 
                 
                     <p>
-                        Organization Website:<%= @organization.org_url %>
+                        <%= @organization.org_url %>
                     </p>
               
               </div>
@@ -82,10 +85,10 @@
 
 
 
-
-<%= image_tag @organization.logo.url %>
-<%= image_tag @organization.logo.url(:medium) %>
-<%= image_tag @organization.logo.url(:thumb) %>
-
+<!--
+<%#= image_tag @organization.logo.url %>
+<%#= image_tag @organization.logo.url(:medium) %>
+<%#= image_tag @organization.logo.url(:thumb) %>
+-->
 
 
