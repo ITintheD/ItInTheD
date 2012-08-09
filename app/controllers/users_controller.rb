@@ -20,5 +20,23 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+  
+  def new
+    @user = User.new
+  end
+  
+  def create
+    @user = User.create(params[:user])
+    redirect_to people_show_path(@user)
+    
+  end
+  
+  def edit 
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    
+  end
 
 end
