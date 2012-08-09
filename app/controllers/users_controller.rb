@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @Users = User.all
+    @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @Users }
+      format.json { render json: @users }
     end
   end
 
@@ -21,5 +21,4 @@ class UsersController < ApplicationController
     end
   end
 
-  
- end
+end

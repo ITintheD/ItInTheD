@@ -1,6 +1,7 @@
 <%= form_for(@organization, :url => organizations_path,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
+<div class="field">
   <%= f.file_field :logo %>
-
+</div>
 
   <% if @organization.errors.any? %>
     <div id="error_explanation">
