@@ -12,7 +12,7 @@
     <th>First name</th>
     <th>Last name</th>
     <th>Email</th>
-    <th></th>
+    <th>image</th>
     <th></th>
     <th></th>
   </tr>
@@ -22,8 +22,8 @@
     <td><%= user.first_name %></td>
     <td><%= user.last_name %></td>
     <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Show', show_people_path(user) %></td>
+    <td><%= link_to 'Edit', edit_people_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -31,4 +31,3 @@
 
 <br />
 
-<%= link_to 'New User', new_user_path %>

@@ -3,10 +3,10 @@ set :repository,  "git@github.com:Compuware/ItInTheD.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-
+set :use_sudo, false
 role :web, "ec2-75-101-241-115.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
 role :app, "ec2-75-101-241-115.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
- role :db,  "ec2-75-101-241-115.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
+role :db,  "ec2-75-101-241-115.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
 set :deploy_to, "/home/ec2-user/rails"
