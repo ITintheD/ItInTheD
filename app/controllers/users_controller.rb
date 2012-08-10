@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.create(params[:user])
-    redirect_to people_show_path(@user)
+    redirect_to show_people_path(@user)
     
   end
   
@@ -38,8 +38,17 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
-    redirect_to people_show_path(@user)
+    redirect_to show_people_path(@user)
     
   end
-
+  # DELETE /people/show/1
+  # DELETE /people/show/1.json
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_path }
+      format.json { head :no_content }
+  end
+  end
 end

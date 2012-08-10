@@ -5,20 +5,23 @@
           <!--Sidebar content-->
           
                 <p>
-                  <b>Image:</b>
+                  <b>Profile:</b>
                   <%= image_tag @user.avatar.url(:thumb) %>
                   
                 </p> 
-                 <p>
-            <b>Name:</b>
-            <%= "#{@user.first_name} #{@user.last_name}" %>
-          </p>
+        <div style="background-color: rgb(217, 237, 247);  border-style:solid;
+            border-width:1px; border-color:black">
+          
+            <p>  Name: <%= "#{@user.first_name} #{@user.last_name}" %> </p>
+            
 
-          <p>
-            <b>Email:</b>
-            <%= @user.email %>
-          </p>           
-          </div>
+            <p>  Email: <%= @user.email %> </p>
+            <p>  Address: <%= @user.location %> </p>
+            <P>  Header:  <%= @user.header %> </P>
+          
+        </div>          
+</div>
+          
 
  <div class="span9">
               <!--Body 1 content-->
