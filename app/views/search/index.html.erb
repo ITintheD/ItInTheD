@@ -1,0 +1,20 @@
+<%if @users.blank? %>
+  No Results found.
+<%else%>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.email %></td>
+  </tr>
+<% end %>
+</table>
+
+<%end%>
