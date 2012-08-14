@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120809222215) do
+ActiveRecord::Schema.define(:version => 20120814204302) do
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
@@ -92,6 +92,9 @@ ActiveRecord::Schema.define(:version => 20120809222215) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
