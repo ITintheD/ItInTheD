@@ -1,4 +1,4 @@
-<%= form_for(@organization, :url => organizations_path,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
+<%= form_for(@organization,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
 <div class="field">
   <%= f.file_field :logo %>
 </div>
