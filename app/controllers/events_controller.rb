@@ -79,5 +79,11 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+
+    def checkin
+      @event = Event.find(params[:id])
+      @event.users << current.user
+      redirect_to events_path
+    end
   end
 end

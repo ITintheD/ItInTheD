@@ -10,7 +10,7 @@ ItInTheD::Application.routes.draw do
 
 
   # match '/person/:id' => 'users#show'
-
+  
   match '/search' => 'search#index', :as => :search
 
   match '/users/show/:id' => 'users#show'
