@@ -1,9 +1,11 @@
 class UserEvent < ActiveRecord::Migration
-  def up
-  	events_id
-  	users_id
+  def change
+  	create_table :events_users do |t|
+      t.integer :event_id
+      t.integer :user_id
+
+      t.timestamps
+    end
   end
 
-  def down
-  end
 end
