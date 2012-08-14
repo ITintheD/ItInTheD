@@ -17,7 +17,10 @@
 
             <p>  Email: <%= @user.email %> </p>
             <p>  Address: <%= @user.location %> </p>
-            <P>  Header:  <%= @user.header %> </P>
+            <p>  City: <%= @user.city %> </p>
+            <p>  State: <%= @user.state %> </p>
+            <p>  Zip: <%= @user.zip %> </p>
+            
           
         </div>          
 </div>
@@ -25,6 +28,8 @@
 
  <div class="span9">
               <!--Body 1 content-->
+          
+        <P>  Header:  <%= @user.header %> </P>
       <p><strong> Summary </strong><p>
       <p>             
       <%= @user.summary %>

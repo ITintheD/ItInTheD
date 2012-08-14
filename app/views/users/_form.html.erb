@@ -29,9 +29,26 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label :street_address %><br />
     <%= f.text_field :location %>
   </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div> 
+   <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip %>
+  </div>
+  
+  
+  
+  
   <div class="field">
     <%= f.label :header %><br />
     <%= f.text_field :header %>
