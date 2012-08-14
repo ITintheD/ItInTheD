@@ -43,7 +43,6 @@ class OrganizationsController < ApplicationController
     @organization = Organization.new(params[:organization])
     respond_to do |format|
       if @organization.save
-        
         format.html { redirect_to @organization, notice: 'Organization was successfully created.' }
         format.json { render json: @organization, status: :created, location: @organization }
       else
