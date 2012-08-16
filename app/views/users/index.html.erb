@@ -7,7 +7,7 @@
 
 <h1>Listing users</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>First name</th>
     <th>Last name</th>
@@ -31,3 +31,6 @@
 
 <br />
 
+<a class="btn btn-primary btn-large" <%= link_to 'Sign up', new_user_registration_path %> </a>
+
+<a class="btn btn-primary btn-large" <%= link_to 'Login', new_user_session_path %> </a>

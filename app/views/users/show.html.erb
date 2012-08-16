@@ -26,7 +26,7 @@
 </div>
           
 
- <div class="span9">
+ <div class="span6">
               <!--Body 1 content-->
           
         <P>  Header:  <%= @user.header %> </P>
@@ -34,6 +34,24 @@
       <p>             
       <%= @user.summary %>
       </p>
+</div>
+<div>
+<% unless @user.events.empty? %>
+<table class="span3" summary="User Events">
+<%= render @events %>
+
+</table>
+<!--%= will_paginate @events %-->
+<%end%>
+</div>
+<div class="span3" style="background-color: rgb(217, 237, 247);  border-style:solid;
+            border-width:1px; border-color:black">
+<strong>Follwing Events List</strong><br />          
+<p>Title <%= @event.title %></p>
+<p>Time <%= @event.time %></p>
+<p>Location <%= @event.local %></p>
+<p>Events <%= @user.events.count %></p>
+
 </div>
 
 </div>
