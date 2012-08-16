@@ -13,6 +13,7 @@ ItInTheD::Application.routes.draw do
   
   match '/search' => 'search#index', :as => :search
   match '/events/checkin/:id' => 'events#checkin', :as => :events_checkin
+  
   match '/users/show/:id' => 'users#show'
   match '/people' => 'users#index', :as => :people
   match '/people/show/:id' => 'users#show', :as => :show_people
