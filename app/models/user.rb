@@ -12,5 +12,5 @@ class User < ActiveRecord::Base
                     :url => '/system/:class/:attachment/:id/:style/:filename', 
                     :styles => { :medium => "300x300>", 
   	                               :thumb => "100x100>" }
-   has_and_belongs_to_many :events, #:dependent => :destroy
+   has_and_belongs_to_many :events#, #:dependent => :destroy
 end
