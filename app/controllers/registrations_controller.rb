@@ -61,7 +61,7 @@ class Devise::RegistrationsController < DeviseController
     set_flash_message :notice, :destroyed if is_navigational_format?
     respond_with_navigational(resource){ redirect_to after_sign_out_path_for(resource_name) }
   end
-
+   
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
@@ -81,6 +81,7 @@ class Devise::RegistrationsController < DeviseController
     self.resource = resource_class.new_with_session(hash, session)
   end
 
+  
   # The path used after sign up. You need to overwrite this method
   # in your own RegistrationsController.
   def after_sign_up_path_for(resource)
