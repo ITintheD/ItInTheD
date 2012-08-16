@@ -9,6 +9,8 @@
                   <%= image_tag @user.avatar.url(:thumb) %>
                   
                 </p> 
+
+                
         <div style="background-color: rgb(217, 237, 247);  border-style:solid;
             border-width:1px; border-color:black">
           
@@ -30,10 +32,16 @@
               <!--Body 1 content-->
           
         <P>  Header:  <%= @user.header %> </P>
-      <p><strong> Summary </strong><p>
+      <p><p><strong> Summary </strong></p>
       <p>             
       <%= @user.summary %>
       </p>
+      </p>               
+       <p><p>  <Strong>Resume</Strong></p>
+         <p> <a href="<%= @user.resume.url %> "> <%= "#{@user.first_name} #{@user.last_name}" %>_resume</a>
+           
+       </p>           
+                
 </div>
 <div>
 <% unless @user.events.empty? %>
