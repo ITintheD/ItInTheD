@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
    has_attached_file :resume,
                     :url => '/system/:class/:attachment/:id/:style/:filename'
-                    
+                    #:styles => { :text => { :quality => :better } },
+                        # :processors => [:rotator, :ocr]
+                        
    has_and_belongs_to_many :events #, #:dependent => :destroy
 end
