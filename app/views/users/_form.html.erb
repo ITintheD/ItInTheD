@@ -73,6 +73,12 @@
         </div>
   </div>
   
+   <div class="control-group">
+    <%= f.label :telephone, :class=> "control-label" %>
+         <div class="controls">
+        <%= f.text_field :telephone %>
+        </div>
+  </div>
   
     <div class="control-group">
     <%= f.label :skill_summary, :class=> "control-label" %>
@@ -100,8 +106,8 @@
   <div class="control-group">
     <%= f.label :header,  :class=> "control-label" %>
      <div class="controls">
-<p> a single line statement about yourself </p>    
-    <%= f.text_field :header %>
+      <%= f.text_field :header %>
+    <p> (A single line statement about yourself.) </p>  
     </div>
   </div>
   
