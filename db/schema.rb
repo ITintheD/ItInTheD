@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(:version => 20120816094731) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
+    t.string   "resume"
     t.string   "resume_file_name"
     t.string   "resume_content_type"
     t.integer  "resume_file_size"
