@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816094731) do
+ActiveRecord::Schema.define(:version => 20120821194517) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(:version => 20120816094731) do
     t.string   "resume_content_type"
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
+    t.string   "telephone"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
