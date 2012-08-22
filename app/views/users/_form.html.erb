@@ -1,13 +1,7 @@
 <%= form_for(@user, :html => { :class => "form-horizontal", :multipart => true }) do |f| %>
 
-<div class="field">
-  <%= f.label :avatar %><br />
-  <%= f.file_field :avatar %>
-</div>
-<div class="field">
-  <%= f.label :resume %><br />
-  <%= f.file_field :resume %>
-</div>
+
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -28,7 +22,7 @@
         </div>
  </div>
   
-  <br/>  
+    
 
 
      <div class="control-group">
@@ -38,10 +32,7 @@
         </div>
  </div>
 
-   <br/>  
-  
-  
-  
+ 
     <div class="control-group">
     <%= f.label :email, :class=> "control-label" %>
          <div class="controls">
@@ -49,8 +40,7 @@
         </div>
  </div>
   
-  <br/>  
- 
+
   <div class="control-group">
     <%= f.label :street_address, :class=> "control-label" %>
          <div class="controls">
@@ -58,8 +48,7 @@
         </div>
  </div>
  
- <br/>
-  
+ 
     <div class="control-group">
     <%= f.label :city, :class=> "control-label" %>
          <div class="controls">
@@ -67,8 +56,7 @@
         </div>
  </div>
 
-  
-  <br/>  
+ 
   
     <div class="control-group">
     <%= f.label :state, :class=> "control-label" %>
@@ -77,8 +65,7 @@
         </div>
  </div>
   
-  <br/>
-  
+ 
    <div class="control-group">
     <%= f.label :zip_code, :class=> "control-label" %>
          <div class="controls">
@@ -86,7 +73,12 @@
         </div>
   </div>
   
-  <br/>
+   <div class="control-group">
+    <%= f.label :telephone, :class=> "control-label" %>
+         <div class="controls">
+        <%= f.text_field :telephone %>
+        </div>
+  </div>
   
     <div class="control-group">
     <%= f.label :skill_summary, :class=> "control-label" %>
@@ -94,11 +86,28 @@
         <%= f.text_area :summary %>
         </div>
     </div>
-  
+    
+  <div class="control-group">
+      <%= f.label :resume, :class=> "control-label" %>
+      <div class="controls">
+      <%= f.file_field :resume %>
+      </div>
+    </div>
+
+
+
+  <div class="control-group">
+      <%= f.label :avatar, :class=> "control-label" %>
+      <div class="controls">
+      <%= f.file_field :avatar %>
+      </div>
+</div>
+
   <div class="control-group">
     <%= f.label :header,  :class=> "control-label" %>
      <div class="controls">
-    <%= f.text_field :header %>
+      <%= f.text_field :header %>
+    <p> (A single line statement about yourself.) </p>  
     </div>
   </div>
   

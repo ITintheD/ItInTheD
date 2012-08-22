@@ -5,7 +5,7 @@
           <!--Sidebar content-->
           
                 <p>
-                  <b>Profile:</b>
+                  
                   <%= image_tag @user.avatar.url(:thumb) %>
                   
                 </p> 
@@ -14,16 +14,13 @@
         <div style="background-color: rgb(217, 237, 247);  border-style:solid;
             border-width:1px; border-color:black">
           
-            <p>  Name: <%= "#{@user.first_name} #{@user.last_name}" %> </p>
-            
+            <p>  <%= "#{@user.first_name} #{@user.last_name}" %> </p>       
 
-            <p>  Email: <%= @user.email %> </p>
-            <p>  Address: <%= @user.location %> </p>
-            <p>  City: <%= @user.city %> </p>
-            <p>  State: <%= @user.state %> </p>
-            <p>  Zip: <%= @user.zip %> </p>
             
-          
+            <p>  <%= @user.location %> 
+            <p>  <%= @user.city %>, <%= @user.state %> <%= @user.zip %> 
+            <p>  <%= @user.telephone %> </p>
+            <p>  <%= @user.email %> </p>
         </div>          
 </div>
           
@@ -31,17 +28,14 @@
  <div class="span6">
               <!--Body 1 content-->
           
-        <P>  Header:  <%= @user.header %> </P>
+        <P>  <h3>  <%= @user.header %> </h3> </P>
       <p><p><strong> Summary </strong></p>
       <p>             
       <%= @user.summary %>
       </p>
       </p>               
        <p><p>  <Strong>Resume</Strong></p>
-         <p> <a href="<%= @user.resume.url %> "> <%= "#{@user.first_name} #{@user.last_name}" %>_resume</a><%= image_tag @user.resume.url %>
-       
-         <iframe src="http://docs.google.com/gview?url=http://0.0.0.0:3000/system/users/resumes/2/original/111.pdf?1345341793&embedded=true" style="width:460px; height:500px;" frameborder="0"></iframe>
-         <!--iframe src="http://docs.google.com/gview?url=<%= @user.resume.url %>&embedded=true" style="width:460px; height:500px;" frameborder="0"></iframe-->
+         <p> <a href="<%= @user.resume.url %> "> <%= image_tag("/assets/resume.png", :alt => "Resume") %></a>         
            
        </p>           
                 
