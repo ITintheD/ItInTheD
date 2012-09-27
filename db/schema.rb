@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802210221) do
+ActiveRecord::Schema.define(:version => 20120809195235) do
 
   create_table "org_types", :force => true do |t|
     t.string   "name"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(:version => 20120802210221) do
     t.string   "org_optional_stat_a"
     t.string   "org_optional_stat_b"
     t.string   "org_optional_stat_c"
-    t.string   "logo"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -88,7 +87,11 @@ ActiveRecord::Schema.define(:version => 20120802210221) do
     t.string   "header"
     t.string   "location"
     t.text     "summary"
-    t.string   "avatar"
+    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
