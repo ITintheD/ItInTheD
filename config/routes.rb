@@ -1,17 +1,26 @@
 ItInTheD::Application.routes.draw do
 
 
+  resources :events
+
   resources :org_types
 
   resources :organizations
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout'}
 
-  #resources :users
 
   # match '/person/:id' => 'users#show'
-
+  
+  match '/search' => 'search#index', :as => :search
+  match '/events/checkin/:id' => 'events#checkin', :as => :events_checkin
+  
   match '/users/show/:id' => 'users#show'
   match '/people' => 'users#index', :as => :people
+  match '/people/show/:id' => 'users#show', :as => :show_people
+  match '/people/edit/:id' => 'users#edit', :as => :edit_people
+  
+  resources :users, :except => [:index, :show, :edit]
+  
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'

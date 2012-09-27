@@ -14,13 +14,13 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @event = Event.find(params[:id])#.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
     end
   end
+<<<<<<< HEAD
   
   def new
     @user = User.new
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.create(params[:user])
-    redirect_to show_people_path(@user)
+    redirect_to people_show_path(@user)
     
   end
   
@@ -37,20 +37,13 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:id])
-    @user.update_attributes(params[:user])
-    redirect_to show_people_path(@user)
     
   end
-  # DELETE /people/show/1
-  # DELETE /people/show/1.json
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_path }
-      format.json { head :no_content }
-  end
-  end
 
+=======
+   def create
+    @user = User.create( params[:user] )
+   end
+  
+>>>>>>> 4533341343c0050e96418b4c7e3edc4a7816dd25
 end

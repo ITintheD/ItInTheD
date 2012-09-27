@@ -57,7 +57,7 @@ class OrganizationsController < ApplicationController
   # PUT /organizations/1.json
   def update
     @organization = Organization.find(params[:id])
-
+    
     respond_to do |format|
       if @organization.update_attributes(params[:organization])
         format.html { redirect_to @organization, notice: 'Organization was successfully updated.' }
@@ -81,3 +81,4 @@ class OrganizationsController < ApplicationController
     end
   end
 end
+
