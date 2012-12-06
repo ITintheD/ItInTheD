@@ -1,0 +1,9 @@
+
+
+	#Loop and Output all videos in Iframes
+
+<% @videos.each do |i| %>
+
+	<iframe src='http://www.youtube.com/v/<%= i%>?version=3&f=user_uploads&app=youtube_gdata' width="400" height="400" frameborder="0">
+	</iframe>
+<%end%>
