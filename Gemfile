@@ -12,6 +12,8 @@ end
 
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'jquery-rails'
+gem 'youtube_it'
+gem 'httparty'
 
 group :development 	do
 	gem 'capistrano'
