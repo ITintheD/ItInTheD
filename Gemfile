@@ -4,6 +4,8 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'devise'
 gem "paperclip", "~> 3.0"
+gem 'twitter'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
