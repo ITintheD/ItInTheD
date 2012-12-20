@@ -1,9 +1,5 @@
 <%= form_for(@organization,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
 <div class="header" border="1"> <br><h4>Organization Information</h4><br></div>
-<div class="field">
-  <%= f.file_field :logo %>
-</div>
-
   <% if @organization.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
@@ -18,12 +14,15 @@
 <table style="margin:10;padding:10">
   <tr>
     <td><b> Name: </b><br><%= f.text_field :name,  :style=>"width:150px; height:18px", :size      => 0x14 %></td>
+    <td><b> Year Established: </b><br><%= f.text_field :org_start_year, :style=>"width:150px; height:18px", :size => 0x14 %></td>
+    <td><b> Phone: </b><br><%= f.text_field :org_phone, :style=>"width:150px; height:18px", :size => 0x14 %></td>
   </tr>
   <tr>
     <td><b> Address: </b><br><%= f.text_field :address,          :style=>"width:150px; height:18px",        :maxlength  => 0x05 %></td>
     <td><b> City: </b><br><%= f.text_field :city,          :style=>"width:150px; height:18px",        :maxlength  => 0x05 %></td>
     <td><b> State: </b><br>
       <select name="org_state" id="org_state" style="width: 160px">
+            <option selected value="USA.NA">Not Selected</option>
             <option value="USA.AL">Alabama </option>        <option value="USA.AK">Alaska  </option>
             <option value="USA.AZ">Arizona </option>        <option value="USA.AR">Arkansas </option>
             <option value="USA.CA">California </option>     <option value="USA.CO">Colorado </option>
@@ -34,7 +33,7 @@
             <option value="USA.IA">Iowa </option>           <option value="USA.KS">Kansas </option>
             <option value="USA.KY">Kentucky </option>       <option value="USA.LA">Louisiana </option>
             <option value="USA.ME">Maine </option>          <option value="USA.MD">Maryland </option>
-            <option value="USA.MA">Massachusetts </option>  <option selected value="USA.MI">Michigan </option>
+            <option value="USA.MA">Massachusetts </option>  <option value="USA.MI">Michigan </option>
             <option value="USA.MN">Minnesota </option>      <option value="USA.MS">Mississippi </option>
             <option value="USA.MO">Missouri </option>       <option value="USA.MT">Montana </option>
             <option value="USA.NE">Nebraska </option>       <option value="USA.NV">Nevada </option>
@@ -50,150 +49,29 @@
             <option value="USA.WA">Washington </option>     <option value="USA.WV">West Virginia </option>
             <option value="USA.WI">Wisconsin </option>      <option value="USA.WY">Wyoming </option>
           </select>
-    <td><b> Zip: </b><br><%= f.text_field :zip,     :style=>"width:150px; height:18px", :maxlength  => 0x09 %></td>
   </tr>
   <tr>
+
     <td align="top"> <b>URL:        </b><br> <%= f.text_field :org_url,        :style=>"width:150px; height:18px",:size        => 0x14 %></td>
     <td> <b>Type:       </b><br>
       <select name="org_type" id="org_type" style="width: 160px">
+        <option seleted value="ORG.NA">Not Selected </option>
         <option value="ORG.S">School </option>
         <option value="ORG.C">Company </option>
       </select>
     </td>
+    <td><b> Logo: </b><br><%= f.file_field :logo%></td>
   </tr>
-
-  <div class="control-group">
-    <%= f.label :name, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :name %>
-      </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :address, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :address %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :city, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :city %>
-    </div>
-  </div>
-  
-    <div class="control-group">
-        <%= f.label :state, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :org_state %>
-    </div>
-  </div>
-  
-  
-  
-  
-      <div class="control-group">
-        <%= f.label :zip, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :zip %>
-    </div>
-  </div>
-  
-   <div class="control-group">
-        <%= f.label :Phone, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :org_phone %>
-    </div>
-  </div>
-  
-  
-  
-  
-  
-  
-  <div class="control-group">
-    <%= f.label :lat, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :lat %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :long, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :long %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :org_url, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :org_url %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :web_link, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :web_link %>
-  </div>
-</div>
-
-  <div class="control-group">
-    <%= f.label :keyword, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :keyword_list %>
-  </div>
-</div>
-
- <div class="control-group">
-    <%= f.label :number_in_organization, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_num_students_employ %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :Year_established, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_start_year %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :annual_sales, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_annual_sales %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :organization_summary, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_area :org_optional_stat_a %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :opportunities, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_area :org_job %>
-  </div>
-</div>
-
-
-
-
-
-	<div class="control-group">
-		<%= f.label 'Organization Type', :class=> "control-label" %>
-     <div class="controls">
-		<%= f.collection_select(:org_type_id, OrgType.all, :id, :name) %>
-	</div>
-    </div>
-   
-  <div class="actions">
+</table>
+<table>
+  <tr>
+    <td> <b>Description:</b><br><%= f.text_area :description, :style=>"width:475px; height:50px" %></td>
+  </tr>
+</table><br><br>
+<%= f.fields_for :socials do |builder| %>
+<%= render 'social', :f => builder %>
+<% end %>
+   <div class="actions">
     <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
   </div>
 <% end %>
