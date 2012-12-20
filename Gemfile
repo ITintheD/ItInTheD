@@ -17,6 +17,9 @@ gem 'jquery-rails'
 gem 'youtube_it'
 gem 'httparty'
 
+
+#gem 'feedzirra'
+
 group :development 	do
 	gem 'capistrano'
 end
