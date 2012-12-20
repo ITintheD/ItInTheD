@@ -25,6 +25,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/new.json
   def new
     @organization = Organization.new
+    @social = @organization.socials.build
 
     respond_to do |format|
       format.html # new.html.erb

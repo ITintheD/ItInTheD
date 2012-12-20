@@ -1,4 +1,5 @@
 <%= form_for(@organization,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
+<div class="header" border="1"> <br><h4>Organization Information</h4><br></div>
 <div class="field">
   <%= f.file_field :logo %>
 </div>
@@ -14,6 +15,52 @@
       </ul>
     </div>
   <% end %>
+<table style="margin:10;padding:10">
+  <tr>
+    <td><b> Name: </b><br><%= f.text_field :name,  :style=>"width:150px; height:18px", :size      => 0x14 %></td>
+  </tr>
+  <tr>
+    <td><b> Address: </b><br><%= f.text_field :address,          :style=>"width:150px; height:18px",        :maxlength  => 0x05 %></td>
+    <td><b> City: </b><br><%= f.text_field :city,          :style=>"width:150px; height:18px",        :maxlength  => 0x05 %></td>
+    <td><b> State: </b><br>
+      <select name="org_state" id="org_state" style="width: 160px">
+            <option value="USA.AL">Alabama </option>        <option value="USA.AK">Alaska  </option>
+            <option value="USA.AZ">Arizona </option>        <option value="USA.AR">Arkansas </option>
+            <option value="USA.CA">California </option>     <option value="USA.CO">Colorado </option>
+            <option value="USA.CT">Connecticut </option>    <option value="USA.DE">Delaware </option>
+            <option value="USA.FL">Florida </option>        <option value="USA.GA">Georgia </option>
+            <option value="USA.HI">Hawaii </option>         <option value="USA.ID">Idaho </option>
+            <option value="USA.IL">Illinois </option>       <option value="USA.IN">Indiana </option>
+            <option value="USA.IA">Iowa </option>           <option value="USA.KS">Kansas </option>
+            <option value="USA.KY">Kentucky </option>       <option value="USA.LA">Louisiana </option>
+            <option value="USA.ME">Maine </option>          <option value="USA.MD">Maryland </option>
+            <option value="USA.MA">Massachusetts </option>  <option selected value="USA.MI">Michigan </option>
+            <option value="USA.MN">Minnesota </option>      <option value="USA.MS">Mississippi </option>
+            <option value="USA.MO">Missouri </option>       <option value="USA.MT">Montana </option>
+            <option value="USA.NE">Nebraska </option>       <option value="USA.NV">Nevada </option>
+            <option value="USA.NH">New Hampshire </option>  <option value="USA.NJ">New Jersey </option>
+            <option value="USA.NM">New Mexico </option>     <option value="USA.NY">New York </option>
+            <option value="USA.NC">North Carolina </option> <option value="USA.ND">North Dakota </option>
+            <option value="USA.OH">Ohio </option>           <option value="USA.OK">Oklahoma </option>
+            <option value="USA.OR">Oregon </option>         <option value="USA.PA">Pennsylvania </option>
+            <option value="USA.RI">Rhode Island </option>   <option value="USA.SC">South Carolina </option>
+            <option value="USA.SD">South Dakota </option>   <option value="USA.TN">Tennessee </option>
+            <option value="USA.TX">Texas </option>          <option value="USA.UT">Utah </option>
+            <option value="USA.VT">Vermont </option>        <option value="USA.VA">Virginia </option>
+            <option value="USA.WA">Washington </option>     <option value="USA.WV">West Virginia </option>
+            <option value="USA.WI">Wisconsin </option>      <option value="USA.WY">Wyoming </option>
+          </select>
+    <td><b> Zip: </b><br><%= f.text_field :zip,     :style=>"width:150px; height:18px", :maxlength  => 0x09 %></td>
+  </tr>
+  <tr>
+    <td align="top"> <b>URL:        </b><br> <%= f.text_field :org_url,        :style=>"width:150px; height:18px",:size        => 0x14 %></td>
+    <td> <b>Type:       </b><br>
+      <select name="org_type" id="org_type" style="width: 160px">
+        <option value="ORG.S">School </option>
+        <option value="ORG.C">Company </option>
+      </select>
+    </td>
+  </tr>
 
   <div class="control-group">
     <%= f.label :name, :class=> "control-label" %>

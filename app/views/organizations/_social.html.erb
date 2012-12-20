@@ -1,0 +1,84 @@
+<fieldset>  
+<legend>Socials</legend>  
+<div class="myboxouter">
+  <div class="myboxinner">
+    <div class="row-fluid">
+      <div class="span4">
+        <div class="control-group">
+          <label class="checkbox">
+            <input type="checkbox" name="faceoption" value="facebook"> Facebook
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="linkoption" value="linkedin"> Linked-in 
+          </label>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="checkbox">
+            <%= check_box_tag "twitter" %>twitter 1
+            <!--<input type="checkbox" name="twitoption" value="twitter"> Twitter -->
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="msoption" value="myspace"> MySpace 
+          </label>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="checkbox">
+            <input type="checkbox" name="googoption" value="google"> Google 
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="otheroption" value="other"> Other 
+          </label>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+    <div class="row-fluid">
+      <div class="span4">
+        <div class="control-group">
+          <label class="left">
+          Facebook<br />
+          </label>
+          <label class="control-label">
+          <%= f.label :name %>
+          </label>
+            <div class="controls">
+            <%= f.text_field :name %>
+            </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="left">
+          Twitter<br />
+          </label>
+          <label class="control-label">
+          <%= f.label :name %>
+          </label>
+            <div class="controls">
+            <%= f.text_field :name %>
+            </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="control-group">
+          <label class="left">
+          Google<br />
+          </label>
+          <label class="control-label">
+          <%= f.label :name %>
+          </label>
+            <div class="controls">
+            <%= f.text_field :name %>
+            </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</fieldset>

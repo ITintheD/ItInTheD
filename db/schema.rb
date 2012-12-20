@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120821194517) do
+ActiveRecord::Schema.define(:version => 20121218211510) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -61,7 +61,19 @@ ActiveRecord::Schema.define(:version => 20120821194517) do
     t.string   "org_job"
     t.string   "org_phone"
     t.string   "org_state"
+    t.text     "description"
+    t.string   "org_type"
   end
+
+  create_table "socials", :force => true do |t|
+    t.string   "soc_url"
+    t.string   "soc_type"
+    t.integer  "organization_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "socials", ["organization_id"], :name => "index_socials_on_organization_id"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"

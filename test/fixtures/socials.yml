@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  soc_url: MyString
+  soc_type: MyString
+  organization: 
+
+two:
+  soc_url: MyString
+  soc_type: MyString
+  organization: 
