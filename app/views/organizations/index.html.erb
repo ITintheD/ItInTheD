@@ -19,14 +19,16 @@
 
 <% @organizations.each do |organization| %>
   <tr>
-    <td><%= organization.org_state %></td>
-    <td><%= organization.org_type %></td>
+    <td><%= organization.name %></td>
+    <td><%= organization.org_start_year %></td>
+    <td><%= organization.org_phone %></td>
+    <td><%= organization.address %></td>
     <td><%= organization.city %></td>
+    <td><%= organization.org_state %></td>
     <td><%= organization.zip %></td>
-    <td><%= organization.lat %></td>
-    <td><%= organization.long %></td>
     <td><%= organization.org_url %></td>
-    <td><%= organization.web_link %></td>
+    <td><%= organization.org_type %></td>
+    <td><%= organization.Description %></td>
     <td><%= link_to 'Show', organization %></td>
     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
     <td><%= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete %></td>
