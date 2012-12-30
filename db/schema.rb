@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218211510) do
+ActiveRecord::Schema.define(:version => 20121230042337) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -63,6 +63,15 @@ ActiveRecord::Schema.define(:version => 20121218211510) do
     t.string   "org_state"
     t.text     "description"
     t.string   "org_type"
+  end
+
+  create_table "resources", :force => true do |t|
+    t.string   "resource_title"
+    t.string   "resource_url"
+    t.string   "resource_file"
+    t.integer  "resource_count"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "socials", :force => true do |t|

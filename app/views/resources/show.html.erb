@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Resource title:</b>
+  <%= @resource.resource_title %>
+</p>
+
+<p>
+  <b>Resource url:</b>
+  <%= @resource.resource_url %>
+</p>
+
+<p>
+  <b>Resource file:</b>
+  <%= @resource.resource_file %>
+</p>
+
+<p>
+  <b>Resource count:</b>
+  <%= @resource.resource_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

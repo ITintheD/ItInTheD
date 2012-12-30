@@ -1,6 +1,8 @@
 ItInTheD::Application.routes.draw do
 
 
+  resources :resources
+
   resources :events
 
   resources :org_types
