@@ -17,7 +17,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Name %>
+        <%= f.label "Name" %>
       </label>
       <div class="controls">
         <%= f.text_field :name %>
@@ -28,7 +28,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Year_Established %>
+        <%= f.label "Year Established" %>
       </label>
       <div class="controls">
         <%= f.text_field :org_start_year %>
@@ -39,7 +39,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Phone %>
+        <%= f.label "Phone" %>
       </label>
       <div class="controls">
         <%= f.text_field :org_phone %>
@@ -52,7 +52,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Address %>
+        <%= f.label "Address" %>
       </label>
       <div class="controls">
         <%= f.text_field :address %>
@@ -63,7 +63,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :City %>
+        <%= f.label "City" %>
       </label>
       <div class="controls">
         <%= f.text_field :city %>
@@ -74,7 +74,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :State %>
+        <%= f.label "State" %>
       </label>
         <div class="controls">
           <%= f.select(:org_state,[["Alabama       ","USA.AL"],["Alaska        ","USA.AK"],["Arizona       ","USA.AZ"],
@@ -104,7 +104,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Zip %>
+        <%= f.label "Zip" %>
       </label>
       <div class="controls">
         <%= f.text_field :zip %>
@@ -115,7 +115,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :URL %>
+        <%= f.label "URL" %>
       </label>
       <div class="controls">
         <%= f.text_field :org_url %>
@@ -126,7 +126,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Type %>
+        <%= f.label "Type" %>
       </label>
       <div class="controls">
         <%= f.select(:keyword_list, [["School", "School"], ["Company", "Company"]], :prompt => 'Select a type') %>
@@ -139,7 +139,7 @@
   <div class="span4">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Logo %>
+        <%= f.label "Logo" %>
       </label>
         <div class="controls">
           <%= f.file_field :logo %>
@@ -152,7 +152,7 @@
   <div class="span12">
     <div class="control-group">
       <label class="left">
-        <%= f.label :Description %>
+        <%= f.label "Description" %>
       </label>
       <div class="controls">
         <%= f.text_area :description , :style=>"width:475px; height:50px" %>
