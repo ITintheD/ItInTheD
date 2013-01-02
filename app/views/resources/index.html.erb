@@ -44,7 +44,7 @@
 <% @resources.each do |resource| %>
   <tr>
     <td><%= resource.resource_title %></td>
-    <td><%= resource.resource_url %></td>
+    <td><%= link_to resource.resource_url %></td>
     <td><%= resource.resource_file %></td>
     <td><%= resource.resource_count %></td>
     <td><%= link_to 'Show', resource %></td>

@@ -8,7 +8,7 @@
 
 <p>
   <b>URL:</b>
-  <%= @resource.resource_url %>
+  <%= link_to @resource.resource_url %>
 </p>
 
 <p>
@@ -20,7 +20,5 @@
   <b>View-count:</b>
   <%= @resource.resource_count %>
 </p>
-
-
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>

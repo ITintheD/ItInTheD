@@ -79,5 +79,13 @@ class ResourcesController < ApplicationController
       format.html { redirect_to resources_url }
       format.json { head :no_content }
     end
+  
+  def increase_count
+    url = params[:resource_url]
+    stat = Stat.find(params[:resource_count])
+    stat.download += 1
+    stat.save
+    redirect_to resource_url(url)
+    end
   end
 end
