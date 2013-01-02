@@ -1,5 +1,34 @@
-<h2>                  </h2>
-<h2>Listing Resources</h2>
+<h3>                  </h3>
+<h2>Listing Resources</h2>
+
+
+
+<div class='row'>
+  <div id="resource_container" class="span0">
+    <div class="content_title"><p> Notes from Session </p> </div>
+    <section></section>
+  </div>
+
+  <div id="resource2_container" class="span0">
+    <div class="content_title"><p> Images </p> </div>
+    <section></section>
+  </div>
+</div>
+
+<div class='row'>
+  <div id="resource_container" class="span0">
+    <div class="content_title"><p> Training </p> </div>
+    <section></section>
+  </div>
+
+  <div id="resource2_container" class="span0">
+    <div class="content_title"><p> Links </p> </div>
+    <section></section>
+  </div>
+</div>
+
+
+
 
 <table class="table table-striped">
   <tr>
@@ -27,4 +56,8 @@
 
 <br />
 
-<%= link_to 'New Resource', new_resource_path %>
+<div class="actions">
+  <a class="btn btn-primary" <%= link_to 'New Resource', new_resource_path %> </a>
+</div>
+
+
