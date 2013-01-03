@@ -60,21 +60,41 @@ input.search-query{
 	height: 15px;
 }
 
+.HeaderContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.HeaderContainer{
+	width: 980px !important;
+	height: 205px;
+}
+
 .container{
 	width: 980px !important;
+}
+
+.FooterContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.FooterContainer{
+	width: 980px !important;
+	height: 260px;
 }
 
 
 #logo_container{
 	width: 180px;
-	height: 180px;
+	height: 184px;
 	float: left;
 	margin-top: 20px;
 }
 
 #nav_container{
 	width: 770px;
-	float: right;
+	float: left;
 }
 
 
@@ -97,7 +117,7 @@ input.search-query{
 
 #social_nav{
 	background-color: #e08628;
-	padding: 7px 15px;
+	padding: 7px 35px;
 	width: 500px;
 }
 

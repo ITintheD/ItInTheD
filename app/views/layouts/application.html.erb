@@ -12,11 +12,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class='container'>
+	<div class="HeaderContainer">
 		<%= render :partial => '/layouts/header' %>
+	</div>
 
+	<div class='container'>
 		<%= yield %>
+	</div>
 
+	<div class="FooterContainer">
 		<%= render :partial => '/layouts/footer' %>
 	</div>
 </body>

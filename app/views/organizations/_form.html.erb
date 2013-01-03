@@ -2,6 +2,7 @@
 
 <p>&nbsp;</p>
 <div class="content_title"><p>Organizations</p></div>
+  <div class="myboxinner">
 <p class="clear">&nbsp;</p>
 <% if @organization.errors.any? %>
   <div id="error_explanation">
@@ -160,6 +161,8 @@
     </div>
   </div>
 </div> 
+
+</div>
 
 <br><br>
 <%= f.fields_for :socials do |builder| %>
