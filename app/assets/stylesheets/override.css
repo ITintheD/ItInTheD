@@ -60,28 +60,26 @@ input.search-query{
 	height: 15px;
 }
 
-.HeaderContainer {
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.HeaderContainer{
+.HeaderContainer {
 	width: 980px !important;
 	height: 205px;
+    margin-left: auto;
+    margin-right: auto;	
 }
 
-.container{
+.container {
 	width: 980px !important;
 }
 
-.FooterContainer {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .FooterContainer{
 	width: 980px !important;
-	height: 260px;
+	height: 260px;	
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: url('pattern_back.jpg');	
 }
 
 
@@ -160,7 +158,7 @@ div.content_title p{
 
 
 footer{
-	background: url('pattern_back.jpg');
+
 	height: 260px;
 	background-repeat: repeat;
 }
@@ -183,6 +181,8 @@ footer h4{
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 }
+
+
 
 
 #footer_program li a, #team_nav li a, #resources li a{
