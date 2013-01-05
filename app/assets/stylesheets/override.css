@@ -63,7 +63,7 @@ input.search-query{
 
 .HeaderContainer {
 	width: 980px !important;
-	height: 205px;
+	height: 204px;
     margin-left: auto;
     margin-right: auto;	
 }
@@ -92,7 +92,6 @@ input.search-query{
 
 #nav_container{
 	width: 770px;
-	float: left;
 }
 
 
@@ -115,7 +114,7 @@ input.search-query{
 
 #social_nav{
 	background-color: #e08628;
-	padding: 7px 35px;
+	padding: 7px 15px;
 	width: 500px;
 }
 
@@ -176,15 +175,14 @@ footer h4{
 }
 
 
-#footer_program li, #team_nav li, #resources li{
+#footer_program li, #team_nav li, #resources li, #community li{
 	list-style: none;
+	height: 200;
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 }
 
 
-
-
-#footer_program li a, #team_nav li a, #resources li a{
+#footer_program li a, #team_nav li a, #resources li a, #community li a{
 	color: white;
 }
