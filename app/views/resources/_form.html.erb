@@ -12,20 +12,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label "Title" %>
-    <%= f.text_field :resource_title %>
-  </div>
-  <div class="field">
-    <%= f.label "URL" %>
-    <%= f.text_field :resource_url %>
-  </div>
-  <div class="field">
-    <%= f.label "File" %>
-    <%= f.text_field :resource_file %>
-  </div>
+  <div class="content_title"><p>Resource</p></div>
+    <div class="myboxinner">
+      <div class="row-fluid">
+
+
+          <div class="span4">
+            <div class="field" style="float:center">
+              <%= f.label "Title" %>
+              <%= f.text_field :resource_title %>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="field" style="float:center">
+              <%= f.label "URL" %>
+              <%= f.text_field :resource_url %>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="field" style="float:center">
+              <%= f.label "File" %>
+              <%= f.text_field :resource_file %>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
 
   <div class="actions">
-  <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
-</div>
+    <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
+  </div>
 <% end %>
