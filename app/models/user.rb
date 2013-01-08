@@ -6,17 +6,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :avatar, :header, :location, :city, :state, :zip, :summary, :resume, :telephone
-  
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  def self.find_for_database_authentication(conditions={})
+    self.where("username = ?", conditions[:email]).limit(1).first ||
+    self.where("email = ?", conditions[:email]).limit(1).first
+  end
+
   has_attached_file :avatar,
                     :url => '/system/:class/:attachment/:id/:style/:filename', 
                     :styles => { :medium => "300x300>", 
-  	                               :thumb => "100x100>" }
+                                   :thumb => "100x100>" }
 
-   has_attached_file :resume,
-                    :url => '/system/:class/:attachment/:id/:style/:filename'
-                    #:styles => { :text => { :quality => :better } },
-                        # :processors => [:rotator, :ocr]
-                        
-   has_and_belongs_to_many :events #, #:dependent => :destroy
 end

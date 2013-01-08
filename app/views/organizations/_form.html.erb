@@ -1,152 +1,176 @@
 <%= form_for(@organization,:html => {:class => "form-horizontal", :multipart => true}) do |f| %>
-<div class="field">
-  <%= f.file_field :logo %>
-</div>
 
-  <% if @organization.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
-
-      <ul>
+<p>&nbsp;</p>
+<div class="content_title"><p>Organization</p></div>
+  <div class="myboxinner">
+<p class="clear">&nbsp;</p>
+<% if @organization.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
+    <ul>
       <% @organization.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="control-group">
-    <%= f.label :name, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :name %>
-      </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :address, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :address %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :city, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :city %>
-    </div>
-  </div>
-  
-    <div class="control-group">
-        <%= f.label :state, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :org_state %>
-    </div>
-  </div>
-  
-  
-  
-  
-      <div class="control-group">
-        <%= f.label :zip, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :zip %>
-    </div>
-  </div>
-  
-   <div class="control-group">
-        <%= f.label :Phone, :class=> "control-label" %>
-    <div class="controls">
-        <%= f.text_field :org_phone %>
-    </div>
-  </div>
-  
-  
-  
-  
-  
-  
-  <div class="control-group">
-    <%= f.label :lat, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :lat %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :long, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :long %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :org_url, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :org_url %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <%= f.label :web_link, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :web_link %>
-  </div>
-</div>
-
-  <div class="control-group">
-    <%= f.label :keyword, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :keyword_list %>
-  </div>
-</div>
-
- <div class="control-group">
-    <%= f.label :number_in_organization, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_num_students_employ %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :Year_established, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_start_year %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :annual_sales, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_field :org_annual_sales %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :organization_summary, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_area :org_optional_stat_a %>
-  </div>
-</div>
-
-<div class="control-group">
-    <%= f.label :opportunities, :class=> "control-label" %>
-     <div class="controls">
-    <%= f.text_area :org_job %>
-  </div>
-</div>
-
-
-
-
-
-	<div class="control-group">
-		<%= f.label 'Organization Type', :class=> "control-label" %>
-     <div class="controls">
-		<%= f.collection_select(:org_type_id, OrgType.all, :id, :name) %>
-	</div>
-    </div>
-   
-  <div class="actions">
-    <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
+    </ul>
   </div>
 <% end %>
+<div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Name" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+  </div>
+
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Year Established" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :org_start_year %>
+      </div>
+    </div>
+  </div>
+
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Phone" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :org_phone %>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Address" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :address %>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "City" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :city %>
+      </div>
+    </div>
+  </div>
+
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "State" %>
+      </label>
+        <div class="controls">
+          <%= f.select(:org_state,[["Alabama       ","USA.AL"],["Alaska        ","USA.AK"],["Arizona       ","USA.AZ"],
+                                   ["Arkansas      ","USA.AR"],["California    ","USA.CA"],["Colorado      ","USA.CO"],
+                                   ["Connecticut   ","USA.CT"],["Delaware      ","USA.DE"],["Florida       ","USA.FL"],
+                                   ["Georgia       ","USA.GA"],["Hawaii        ","USA.HI"],["Idaho         ","USA.ID"],
+                                   ["Illinois      ","USA.IL"],["Indiana       ","USA.IN"],["Iowa          ","USA.IA"],
+                                   ["Kansas        ","USA.KS"],["Kentucky      ","USA.KY"],["Louisiana     ","USA.LA"],
+                                   ["Maine         ","USA.ME"],["Maryland      ","USA.MD"],["Massachusetts ","USA.MA"],
+                                   ["Michigan      ","USA.MI"],["Minnesota     ","USA.MN"],["Mississippi   ","USA.MS"],
+                                   ["Missouri      ","USA.MO"],["Montana       ","USA.MT"],["Nebraska      ","USA.NE"],
+                                   ["Nevada        ","USA.NV"],["New Hampshire ","USA.NH"],["New Jersey    ","USA.NJ"],
+                                   ["New Mexico    ","USA.NM"],["New York      ","USA.NY"],["North Carolina","USA.NC"],
+                                   ["North Dakota  ","USA.ND"],["Ohio          ","USA.OH"],["Oklahoma      ","USA.OK"],
+                                   ["Oregon        ","USA.OR"],["Pennsylvania  ","USA.PA"],["Puerto Rico   ","USA.PR"],
+                                   ["Rhode Island  ","USA.RI"],["South Carolina","USA.SC"],["South Dakota  ","USA.SD"],
+                                   ["Tennessee     ","USA.TN"],["Texas         ","USA.TX"],["Utah          ","USA.UT"],
+                                   ["Vermont       ","USA.VT"],["Virginia      ","USA.VA"],["Washington    ","USA.WA"],
+                                   ["Washington DC ","USA.DC"],["West Virginia ","USA.WV"],["Wisconsin     ","USA.WI"],
+                                   ["Wyoming       ","USA.WY"]],
+                                  :prompt => 'Select a state') %>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Zip" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :zip %>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "URL" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :org_url %>
+      </div>
+    </div>
+  </div>
+
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Type" %>
+      </label>
+      <div class="controls">
+        <%= f.select(:keyword_list, [["School", "School"], ["Company", "Company"]], :prompt => 'Select a type') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Logo" %>
+      </label>
+        <div class="controls">
+          <%= f.file_field :logo %>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Description" %>
+      </label>
+      <div class="controls">
+        <%= f.text_area :description , :style=>"width:475px; height:50px" %>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</div>
+
+<br><br>
+<%= f.fields_for :socials do |builder| %>
+<%= render 'social', :f => builder %>
+<% end %>
+
+<div class="actions">
+  <%= f.submit ' Submit ', :class=> "btn btn-primary" %>
+</div>
+<% end %>
+

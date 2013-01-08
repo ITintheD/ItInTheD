@@ -1,30 +1,33 @@
-<h1>Listing organizations</h1>
+<h2>Listing Organizations</h2>   
+ 
 
 <table  class="table table-striped">
   <tr>
     <th>Name</th>
+    <th>Year Established</th>
+    <th>Phone</th>
     <th>Address</th>
     <th>City</th>
+    <th>State</th>
     <th>Zip</th>
-    <th>Lat</th>
-    <th>Long</th>
-    <th>Org url</th>
-    <th>Web link</th>
-    <th></th>
-    <th></th>
+    <th>URL</th>
+    <th>Type</th>
+    <th>Description</th>
     <th></th>
   </tr>
 
 <% @organizations.each do |organization| %>
   <tr>
     <td><%= organization.name %></td>
+    <td><%= organization.org_start_year %></td>
+    <td><%= organization.org_phone %></td>
     <td><%= organization.address %></td>
     <td><%= organization.city %></td>
+    <td><%= organization.org_state %></td>
     <td><%= organization.zip %></td>
-    <td><%= organization.lat %></td>
-    <td><%= organization.long %></td>
     <td><%= organization.org_url %></td>
-    <td><%= organization.web_link %></td>
+    <td><%= organization.keyword_list %></td>
+    <td><%= organization.description %></td>
     <td><%= link_to 'Show', organization %></td>
     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
     <td><%= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete %></td>
@@ -34,6 +37,6 @@
 
 <br />
 
-<a class="btn btn-primary btn-large" <%= link_to 'New Organization', new_organization_path %> </a>
-
-
+<div class="actions">
+    <a class="btn btn-primary" <%= link_to 'New Organization', new_organization_path %> </a>
+</div>

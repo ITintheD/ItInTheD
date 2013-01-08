@@ -1,0 +1,63 @@
+HEADER
+
+<!-- 
+   <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid" id="top_navmenu">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">ItInTheD</a>
+          <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user"></i>
+                 <%-if user_signed_in?%>
+					<%= current_user.email %>
+                  <%-else %>
+  					Guest
+    			<%end%>
+
+                  <span class="caret"></span>
+                </a>
+                 <ul class="dropdown-menu">
+                 <%-if user_signed_in?%>
+					<li> <%= link_to "Logout", destroy_user_session_path, :method => :delete %> </li>
+                  <%-else %>
+  					<li> <%= link_to "Login", new_user_session_path %></li>
+                    <li> <%= link_to "Sign Up",new_user_registration_path%> </li>
+  				<%end%>
+
+                </ul>
+              </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/"><i class="icon-home"></i>Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/organizations">Companies</a></li>
+              <li><a href="/users">Profile</a></li>
+              <li><a href="/home/about">About</a></li>
+              <li><a href="/home/contact">Contact</a></li>
+            </ul>
+            <div class='span3 round' style="margin-bottom:-20px; margin-top:4px;">
+
+          <%= form_tag search_path, :method => :post do %>
+             <%= text_field :search_params, :q, :id => 'search', :placeholder => "search" %>
+          <%end%>
+
+
+          </div>
+
+       </div>
+        </div>
+      </div>
+    </div>
+
+
+<header class='row' style="margin-top:60px;">
+
+
+</header>
+ -->

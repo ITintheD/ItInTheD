@@ -1,0 +1,23 @@
+<h2><%= notice %></h2>
+
+<p>
+  <b>Title:</b>
+  <%= @resource.resource_title %>
+</p>
+
+<p>
+  <b>URL:</b>
+  <%= link_to @resource.resource_url %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @resource.resource_file %>
+</p>
+
+<p>
+  <b>View-count:</b>
+  <%= @resource.resource_count %>
+</p>
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

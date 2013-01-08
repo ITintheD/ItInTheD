@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   
   def index
-    @title = 'IT in the D Home Page'
+    @title = 'IT in the D'
+    #@entries = Feed.fetch
   end
   
   

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resource_title: MyString
+  resource_url: MyString
+  resource_file: MyString
+  resource_count: 1
+
+two:
+  resource_title: MyString
+  resource_url: MyString
+  resource_file: MyString
+  resource_count: 1

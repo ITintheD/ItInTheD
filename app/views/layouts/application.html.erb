@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<title><%= @title %></title>
+  		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
 
-  <title><%= @title %></title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+	<body>
+		<div class='HeaderContainer'>
+			<%= render :partial => 'layouts/header' %>
+		</div>
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBcr3HBYcuBxKApzsGOFB9E8ZcMlvpf3HQ&sensor=false"></script>
+		<div class='MidContainer'>
+			<%= yield %>
+		</div>
 
+		<div class='FooterContainer'>
+			<%= render :partial => 'layouts/footer' %>
+		</div>
 
-  
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div class='container'>
-		<%= render :partial => '/layouts/header' %>
-
-		<%= yield %>
-
-		<%= render :partial => '/layouts/footer' %>
-	</div>
-</body>
+	</body>
 </html>

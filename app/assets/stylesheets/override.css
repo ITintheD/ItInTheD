@@ -1,0 +1,197 @@
+/*!
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+
+
+a:hover{
+	background:transparent !important;
+}
+
+
+.collapse {
+  height: auto;
+  width: auto;
+}
+
+.collapse.height {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+
+.collapse.width {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.35s ease;
+  -moz-transition: width 0.35s ease;
+  -o-transition: width 0.35s ease;
+  transition: width 0.35s ease;
+}
+
+.collapse.in.width {
+  width: auto;
+}
+
+.collapse.in.height {
+  height: auto;
+}
+
+.input-medium {
+	width: 100px;
+}
+
+input.search-query{
+	margin-bottom: 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 10px;
+	border-radius: 0px;
+	height: 15px;
+}
+
+
+.HeaderContainer {
+	width: 980px !important;
+	height: 204px;
+    margin-left: auto;
+    margin-right: auto;	
+    margin-bottom: 20px;
+}
+
+.container {
+	width: 980px !important;
+}
+
+
+.MidContainer {
+	width: 980px !important;
+    margin-left: auto;
+    margin-right: auto;	
+    margin-bottom: 20px;	
+}
+
+.FooterContainer{
+	width: 980px !important;
+	height: 260px;	
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: url('pattern_back.jpg');	
+}
+
+
+#logo_container{
+	width: 180px;
+	height: 184px;
+	float: left;
+	margin-top: 20px;
+}
+
+#nav_container{
+	width: 770px;
+	float:left;
+}
+
+
+#main_nav li a{
+	color:#162d3f;
+	font-family: 'verdana', sans-serif;
+	font-size: 16px;
+}
+
+#nav li, #social_nav li, #sponsors li{
+	display: inline-block;
+	color: #162d3f;
+}
+
+
+#main_nav li, #social_nav li{
+	list-style: none;
+	display: inline-block;
+}
+
+#social_nav{
+	background-color: #e08628;
+	padding: 7px 15px;
+	width: 500px;
+}
+
+.dropdown-menu{
+	background-color:#162d3f;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-webkit-box-shadow: 0 0 0;
+	box-shadow: 0 0 0;
+}
+
+.dropdown-menu li{
+	border-bottom: thin solid white;
+	width: 100%;
+}
+
+
+.dropdown-menu li a{
+	font-size: 13px !important;
+	color: white !important;
+}
+
+
+div.content_title{
+	background-image: url('heading_bar.png');
+	height: 18px;
+}
+
+
+div.content_title p{
+	float: left;
+	background: white;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #162d3f;
+	font-family: 'Century Gothic', sans-serif;
+	padding-right: 10px;
+}
+
+
+footer{
+
+	height: 260px;
+	background-repeat: repeat;
+}
+
+footer h4{
+	color: white;
+	font-family: 'Arial Black' , sans-serif;
+	font-size: 18px;
+}
+
+
+#foot_program_container{
+	margin: 0;
+	float: left;
+}
+
+
+#footer_program li, #team_nav li, #resources li, #community li{
+	list-style: none;
+	height: 200;
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+}
+
+
+#footer_program li a, #team_nav li a, #resources li a, #community li a{
+	color: white;
+}
