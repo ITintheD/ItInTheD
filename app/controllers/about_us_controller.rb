@@ -1,2 +1,0 @@
-class AboutUsController < ApplicationController
-end
