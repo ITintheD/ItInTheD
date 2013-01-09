@@ -1,31 +1,47 @@
 
 <%= form_for(resource, :as => resource_name, :html => {:class => "form-horizontal"}, :url => session_path(resource_name)) do |f| %>
  <fieldset>
-	<legend>Login</legend>
-	<div class="control-group">
-	<%= f.label :email, :class => "control-label"  %>
-	 <div class="controls">
-	 <%= f.email_field :email %>
+	<div class="content_title"><p>Login</p></div>
+	<div class="myboxinner">
+		<div class ="row-fluid">
+			<div class ="span4">
+				<div class="control-group">
+					<label>
+						<%= f.label "Email"%>
+					</label>
+				<div class="controls">
+					<%= f.email_field :email %>
+				</div>
+			</div>
+		</div>
 	</div>
- </div>
-
-  <div class="control-group">
-	<%= f.label :password, :class => "control-label" %>
- <div class="controls">	
-	<%= f.password_field :password %>
+	<div class="row-fluid">
+		<div class="span4">
+			<div class="control-group">
+				<label>
+					<%= f.label "Password"%>
+				</label>
+				<div class="controls">
+					<%= f.password_field :password %>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
-
   <% if devise_mapping.rememberable? -%>
- 
-  <div class="control-group">
-	<%= f.label :remember_me, :class => "control-label" %>
-<div class="controls">
-	<%= f.check_box :remember_me %> 
-	</div>
-</div>
-  <% end -%>
-
+ 	<div class="row-fluid">
+ 		<div class="span4">
+ 			<div class="control-group">
+ 				<label>
+ 					<%= f.label "Remember me" %>
+ 				</label>
+ 				<div class="controls">
+ 					<%= f.check_box :remember_me %>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<% end -%>
+ </div>
 <div class="form-actions">
 	<%= f.submit "Login", :class => "btn btn-primary" %>
 </div>
