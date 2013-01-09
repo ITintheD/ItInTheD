@@ -10,13 +10,36 @@
 
 
 
+li form{
+	margin: 0;
+}
+
+#app_back{
+width: 980px !important;
+	height: 20px;	
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: url('pattern_back.jpg');	
+    
+}
+
 a:hover{
 	background:transparent !important;
 }
 
+.glyphw{
+    background-image: url(/assets/glyphicons-halflings-white.png);
+}
+
+
+.last_item{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
 
 .collapse {
-  height: auto;
   width: auto;
 }
 
@@ -63,7 +86,7 @@ input.search-query{
 
 .HeaderContainer {
 	width: 980px !important;
-	height: 145px;
+	height: 204px;
     margin-left: auto;
     margin-right: auto;	
     margin-bottom: 20px;
@@ -83,34 +106,36 @@ input.search-query{
 
 .FooterContainer{
 	width: 980px !important;
-	height: 160px;	
+	height: 260px;	
 	margin-left: auto;
     margin-right: auto;
-    bottom:0px;
     position: relative;
     background: url('pattern_back.jpg');	
+    clear: both;
 }
 
 
 #logo_container{
 	width: 180px;
-	height: 125px;
+	height: 184px;
 	float: left;
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 #nav_container{
-	width: 770px;
-	float:left;
+	width: 600px;
+	float:right;
+	margin: 15px 0px 0px 0px;
 }
 
 
 #main_nav li a{
 	color:#162d3f;
-	white-space: nowrap;
 	font-family: 'verdana', sans-serif;
 	font-size: 16px;
 }
+
+
 
 #nav li, #social_nav li, #sponsors li{
 	display: inline-block;
@@ -118,24 +143,25 @@ input.search-query{
 }
 
 
-#main_nav li, #social_nav li{
-	list-style: none;
-	/*white-space: nowrap;*/
-	display: inline-block;
+#main_nav li{
+	padding-right: 14px;
 }
 
-#nav li a {
-	margin-top:20px;
-
+#main_nav li, #social_nav li{
+	list-style: none;
+	display: inline-block;
 }
 
 #social_nav{
 	background-color: #e08628;
-	/*padding: 7px 15px;*/
-	height:100px;
-	width: 500px;
-
+	padding: 7px 15px;
+	width: 370px;
 }
+
+
+
+
+
 
 .dropdown-menu{
 	background-color:#162d3f;
@@ -175,9 +201,40 @@ div.content_title p{
 }
 
 
+
+#about_container, #faq_container{
+	width: 600px;
+	float: left;
+	padding-right: 80px;
+}
+
+
+#about_container h3, #faq_container h3{
+	border-bottom: thin solid #E08628;
+	text-transform: uppercase;
+	color: #162D3F;
+}
+
+
+
+#sidebar_container{
+	width: 300px;
+	float: left;
+}
+
+
+a.accordion-toggle:hover{
+	color:#E08628;
+}
+
+
+.top-space{
+	margin-top: 30px;
+}
+
 footer{
 
-	height: 160px;
+	height: 260px;
 	background-repeat: repeat;
 }
 
@@ -196,7 +253,7 @@ footer h4{
 
 #footer_program li, #team_nav li, #resources li, #community li{
 	list-style: none;
-	height: 160;
+	height: 200;
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 }
