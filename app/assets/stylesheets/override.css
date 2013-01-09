@@ -63,7 +63,7 @@ input.search-query{
 
 .HeaderContainer {
 	width: 980px !important;
-	height: 204px;
+	height: 145px;
     margin-left: auto;
     margin-right: auto;	
     margin-bottom: 20px;
@@ -83,9 +83,10 @@ input.search-query{
 
 .FooterContainer{
 	width: 980px !important;
-	height: 260px;	
+	height: 160px;	
 	margin-left: auto;
     margin-right: auto;
+    bottom:0px;
     position: relative;
     background: url('pattern_back.jpg');	
 }
@@ -93,9 +94,9 @@ input.search-query{
 
 #logo_container{
 	width: 180px;
-	height: 184px;
+	height: 125px;
 	float: left;
-	margin-top: 20px;
+	margin-top: 15px;
 }
 
 #nav_container{
@@ -106,6 +107,7 @@ input.search-query{
 
 #main_nav li a{
 	color:#162d3f;
+	white-space: nowrap;
 	font-family: 'verdana', sans-serif;
 	font-size: 16px;
 }
@@ -118,13 +120,21 @@ input.search-query{
 
 #main_nav li, #social_nav li{
 	list-style: none;
+	/*white-space: nowrap;*/
 	display: inline-block;
+}
+
+#nav li a {
+	margin-top:20px;
+
 }
 
 #social_nav{
 	background-color: #e08628;
-	padding: 7px 15px;
+	/*padding: 7px 15px;*/
+	height:100px;
 	width: 500px;
+
 }
 
 .dropdown-menu{
@@ -167,7 +177,7 @@ div.content_title p{
 
 footer{
 
-	height: 260px;
+	height: 160px;
 	background-repeat: repeat;
 }
 
@@ -186,7 +196,7 @@ footer h4{
 
 #footer_program li, #team_nav li, #resources li, #community li{
 	list-style: none;
-	height: 200;
+	height: 160;
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
 }

@@ -20,7 +20,8 @@
     <section id="box_padding">
     <p class="clear">Year established: <%= @organization.org_start_year %></p>  
     <p>Number in Organization: <%= @organization.org_num_students_employ %></p>
-    <p>Annual Income: <%= @organization.org_annual_sales %></p>
+    <p>Annual Income: $<%= @organization.org]]_annual_sales %></p>
+
   </section>
   <div>
     <!--Space holder for additional content content-->
@@ -33,18 +34,18 @@
 
     <p><%= @organization.address %></p>
 
-    <p><%= @organization.city %> <%= @organization.org_state %> <%= @organization.zip %></p> 
+    <p><%= @organization.city %>, <%= @organization.org_state %> <%= @organization.zip %></p> 
                 
     <p><%= @organization.org_phone %></p>
            
-    <p><%= @organization.org_url %></p>
+    <p><%= link_to @organization.org_url, @organization.org_url %></p>
 
     <p><%= @organization.keyword_list %></p>                    
  
 <!--Body 2 content-->
     <p><strong>Summary</strong><p>
      <p>             
-      <%= @organization.org_optional_stat_a %>
+      <%= @organization.description %>
     </p>
 <!--Body 3 content-->
    <p><strong>Career Opportunities</strong><p>
