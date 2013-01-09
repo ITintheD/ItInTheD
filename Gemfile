@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'devise'
 gem "paperclip", "~> 3.0"
 gem 'twitter'
+gem 'thin'
 
 
 group :assets do
