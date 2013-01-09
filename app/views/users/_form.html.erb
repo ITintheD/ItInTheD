@@ -79,24 +79,24 @@
         <%= f.label "State" %>
       </label>
         <div class="controls">
-          <%= f.select(:state,[["Alabama       ","USA.AL"],["Alaska        ","USA.AK"],["Arizona       ","USA.AZ"],
-                                   ["Arkansas      ","USA.AR"],["California    ","USA.CA"],["Colorado      ","USA.CO"],
-                                   ["Connecticut   ","USA.CT"],["Delaware      ","USA.DE"],["Florida       ","USA.FL"],
-                                   ["Georgia       ","USA.GA"],["Hawaii        ","USA.HI"],["Idaho         ","USA.ID"],
-                                   ["Illinois      ","USA.IL"],["Indiana       ","USA.IN"],["Iowa          ","USA.IA"],
-                                   ["Kansas        ","USA.KS"],["Kentucky      ","USA.KY"],["Louisiana     ","USA.LA"],
-                                   ["Maine         ","USA.ME"],["Maryland      ","USA.MD"],["Massachusetts ","USA.MA"],
-                                   ["Michigan      ","USA.MI"],["Minnesota     ","USA.MN"],["Mississippi   ","USA.MS"],
-                                   ["Missouri      ","USA.MO"],["Montana       ","USA.MT"],["Nebraska      ","USA.NE"],
-                                   ["Nevada        ","USA.NV"],["New Hampshire ","USA.NH"],["New Jersey    ","USA.NJ"],
-                                   ["New Mexico    ","USA.NM"],["New York      ","USA.NY"],["North Carolina","USA.NC"],
-                                   ["North Dakota  ","USA.ND"],["Ohio          ","USA.OH"],["Oklahoma      ","USA.OK"],
-                                   ["Oregon        ","USA.OR"],["Pennsylvania  ","USA.PA"],["Puerto Rico   ","USA.PR"],
-                                   ["Rhode Island  ","USA.RI"],["South Carolina","USA.SC"],["South Dakota  ","USA.SD"],
-                                   ["Tennessee     ","USA.TN"],["Texas         ","USA.TX"],["Utah          ","USA.UT"],
-                                   ["Vermont       ","USA.VT"],["Virginia      ","USA.VA"],["Washington    ","USA.WA"],
-                                   ["Washington DC ","USA.DC"],["West Virginia ","USA.WV"],["Wisconsin     ","USA.WI"],
-                                   ["Wyoming       ","USA.WY"]],
+          <%= f.select(:state,[["Alabama       "],["Alaska        "],["Arizona       "],
+                                   ["Arkansas      "],["California    "],["Colorado      "],
+                                   ["Connecticut   "],["Delaware      "],["Florida       "],
+                                   ["Georgia       "],["Hawaii        "],["Idaho         "],
+                                   ["Illinois      "],["Indiana       "],["Iowa          "],
+                                   ["Kansas        "],["Kentucky      "],["Louisiana     "],
+                                   ["Maine         "],["Maryland      "],["Massachusetts "],
+                                   ["Michigan      "],["Minnesota     "],["Mississippi   "],
+                                   ["Missouri      "],["Montana       "],["Nebraska      "],
+                                   ["Nevada        "],["New Hampshire "],["New Jersey    "],
+                                   ["New Mexico    "],["New York      "],["North Carolina"],
+                                   ["North Dakota  "],["Ohio          "],["Oklahoma      "],
+                                   ["Oregon        "],["Pennsylvania  "],["Puerto Rico   "],
+                                   ["Rhode Island  "],["South Carolina"],["South Dakota  "],
+                                   ["Tennessee     "],["Texas         "],["Utah          "],
+                                   ["Vermont       "],["Virginia      "],["Washington    "],
+                                   ["Washington DC "],["West Virginia "],["Wisconsin     "],
+                                   ["Wyoming       "]],
                                   :prompt => 'Select a state') %>
         </div>
       </div>
@@ -120,7 +120,7 @@
         <%= f.label "Telephone" %>
       </label>
       <div class="controls">
-        <%= f.text_field :telephone %>
+        <%= f.text_field :telephone, :value => "Ex. (555) 555-5555" %>
       </div>
     </div>
   </div>
