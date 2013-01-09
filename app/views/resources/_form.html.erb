@@ -12,31 +12,35 @@
     </div>
   <% end %>
 
-  <div class="content_title"><p>Resource</p></div>
+  <div class="content_title"><p>New Resource</p></div>
     <div class="myboxinner">
       <div class="row-fluid">
-
-
-          <div class="span4">
-            <div class="field" style="float:center">
-              <%= f.label "Title" %>
-              <%= f.text_field :resource_title %>
-            </div>
+        <div class="span4">
+          <div class="field" style="float:center">
+            <%= f.label "Title" %>
+            <%= f.text_field :resource_title %>
           </div>
-          <div class="span4">
-            <div class="field" style="float:center">
-              <%= f.label "URL" %>
-              <%= f.text_field :resource_url %>
-            </div>
+        </div>
+        <div class="span4">
+          <div class="field" style="float:center">
+            <%= f.label "URL" %>
+            <%= f.url_field :resource_url, :value => 'http://' %>
           </div>
-          <div class="span4">
-            <div class="field" style="float:center">
-              <%= f.label "File" %>
-              <%= f.text_field :resource_file %>
-            </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span4">
+          <div class="field" style="float:center">
+            <%= f.label "File" %>
+            <%= f.file_field :resource_file %>
           </div>
-
-
+        </div>
+        <div class="span4">
+          <div class="field" style="float:center">
+            <%= f.label "Type" %>
+            <%= f.select(:resource_type,[["Notes"], ["Images"], ["Training"], ["Links"]], :prompt => 'Select a type') %>
+          </div>
+        </div>
       </div>
     </div>
 

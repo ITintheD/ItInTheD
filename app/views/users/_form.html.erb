@@ -1,7 +1,10 @@
 <%= form_for(@user, :html => { :class => "form-horizontal", :multipart => true }) do |f| %>
 
 
-
+<p>&nbsp;</p>
+<div class="content_title"><p>Organization</p></div>
+  <div class="myboxinner">
+<p class="clear">&nbsp;</p>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -14,106 +17,170 @@
     </div>
   <% end %>
 
-
+<div class="row-fluid">
+  <div class="span4">
     <div class="control-group">
-    <%= f.label :first_name, :class=> "control-label" %>
-         <div class="controls">
+      <label class="left">
+        <%= f.label "First Name" %>
+      </label>
+      <div class="controls">
         <%= f.text_field :first_name %>
-        </div>
- </div>
-  
-    
-
-
-     <div class="control-group">
-    <%= f.label :last_name, :class=> "control-label" %>
-         <div class="controls">
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Last Name" %>
+      </label>
+      <div class="controls">
         <%= f.text_field :last_name %>
-        </div>
- </div>
-
- 
+      </div>
+    </div>
+  </div>
+  <div class="span4">
     <div class="control-group">
-    <%= f.label :email, :class=> "control-label" %>
-         <div class="controls">
+      <label class="left">
+        <%= f.label "Email" %>
+      </label>
+      <div class="controls">
         <%= f.text_field :email %>
-        </div>
- </div>
-  
-
-  <div class="control-group">
-    <%= f.label :street_address, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :location %>
-        </div>
- </div>
- 
- 
-    <div class="control-group">
-    <%= f.label :city, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :city %>
-        </div>
- </div>
-
- 
-  
-    <div class="control-group">
-    <%= f.label :state, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :state %>
-        </div>
- </div>
-  
- 
-   <div class="control-group">
-    <%= f.label :zip_code, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :zip %>
-        </div>
-  </div>
-  
-   <div class="control-group">
-    <%= f.label :telephone, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_field :telephone %>
-        </div>
-  </div>
-  
-    <div class="control-group">
-    <%= f.label :skill_summary, :class=> "control-label" %>
-         <div class="controls">
-        <%= f.text_area :summary %>
-        </div>
-    </div>
-    
-  <div class="control-group">
-      <%= f.label :resume, :class=> "control-label" %>
-      <div class="controls">
-      <%= f.file_field :resume %>
       </div>
     </div>
-
-
-
-  <div class="control-group">
-      <%= f.label :avatar, :class=> "control-label" %>
-      <div class="controls">
-      <%= f.file_field :avatar %>
-      </div>
+  </div>
 </div>
-
-  <div class="control-group">
-    <%= f.label :header,  :class=> "control-label" %>
-     <div class="controls">
-      <%= f.text_field :header %>
-    <p> (A single line statement about yourself.) </p>  
+  
+<div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Street Address" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :location %>
+      </div>
     </div>
   </div>
-  
-  <div class="actions">
-    <%= f.submit %>
+ 
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "City" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :city %>
+      </div>
+    </div>
   </div>
-  
 
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "State" %>
+      </label>
+        <div class="controls">
+          <%= f.select(:state,[["Alabama       ","USA.AL"],["Alaska        ","USA.AK"],["Arizona       ","USA.AZ"],
+                                   ["Arkansas      ","USA.AR"],["California    ","USA.CA"],["Colorado      ","USA.CO"],
+                                   ["Connecticut   ","USA.CT"],["Delaware      ","USA.DE"],["Florida       ","USA.FL"],
+                                   ["Georgia       ","USA.GA"],["Hawaii        ","USA.HI"],["Idaho         ","USA.ID"],
+                                   ["Illinois      ","USA.IL"],["Indiana       ","USA.IN"],["Iowa          ","USA.IA"],
+                                   ["Kansas        ","USA.KS"],["Kentucky      ","USA.KY"],["Louisiana     ","USA.LA"],
+                                   ["Maine         ","USA.ME"],["Maryland      ","USA.MD"],["Massachusetts ","USA.MA"],
+                                   ["Michigan      ","USA.MI"],["Minnesota     ","USA.MN"],["Mississippi   ","USA.MS"],
+                                   ["Missouri      ","USA.MO"],["Montana       ","USA.MT"],["Nebraska      ","USA.NE"],
+                                   ["Nevada        ","USA.NV"],["New Hampshire ","USA.NH"],["New Jersey    ","USA.NJ"],
+                                   ["New Mexico    ","USA.NM"],["New York      ","USA.NY"],["North Carolina","USA.NC"],
+                                   ["North Dakota  ","USA.ND"],["Ohio          ","USA.OH"],["Oklahoma      ","USA.OK"],
+                                   ["Oregon        ","USA.OR"],["Pennsylvania  ","USA.PA"],["Puerto Rico   ","USA.PR"],
+                                   ["Rhode Island  ","USA.RI"],["South Carolina","USA.SC"],["South Dakota  ","USA.SD"],
+                                   ["Tennessee     ","USA.TN"],["Texas         ","USA.TX"],["Utah          ","USA.UT"],
+                                   ["Vermont       ","USA.VT"],["Virginia      ","USA.VA"],["Washington    ","USA.WA"],
+                                   ["Washington DC ","USA.DC"],["West Virginia ","USA.WV"],["Wisconsin     ","USA.WI"],
+                                   ["Wyoming       ","USA.WY"]],
+                                  :prompt => 'Select a state') %>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+ <div class="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Zip" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :zip %>
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Telephone" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :telephone %>
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Resume" %>
+      </label>
+      <div class="controls">
+        <%= f.file_field :resume %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class ="row-fluid">
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Header (Statement about yourself)" %>
+      </label>
+      <div class="controls">
+        <%= f.text_field :header %>
+      </div>
+    </div>
+  </div>
+  <div class ="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Type" %>
+      </label>
+      <div class="controls">
+        <%= f.select(:user_type, [["Instructor"], ["Student"]], :prompt => 'select a type') %>
+      </div>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Avatar" %>
+      </label>
+      <div>
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="control-group">
+      <label class="left">
+        <%= f.label "Description" %>
+      </label>
+      <div class="controls">
+        <%= f.text_area :summary , :style=>"width:475px; height:50px" %>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="actions">
+  <%= f.submit %>
+</div>
+  
 <% end %>

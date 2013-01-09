@@ -1,13 +1,10 @@
-<div class="content_title"><p>Socials</p></div>
+<div class="content_title"><p>Socials (optional)</p></div>
   <div class="myboxinner">
     <div class="row-fluid" id="extraspace">
       <div class="span4">
         <div class="control-group">
           <label class="left">
-          <%=link_to "Facebook", "http://facebook.com/", :target => "_blank" %><br />
-          </label>
-          <label class="left">
-          <%= f.label "Home Page" %>
+          <%=f.label "Facebook Profile URL" %>
           </label>
             <div class="controls">
             <%= f.text_field :soc_url, :value => "http://facebook.com/" %>
@@ -17,11 +14,9 @@
       <div class="span4">
         <div class="control-group">
           <label class="left">
-          <%=link_to "Twitter", "http://twitter.com/", :target => "_blank" %><br />
+          <%=f.label "Twitter Profile URL" %>
            </label>
-          <label class="left">
-          <%= f.label "Home Page" %>          
-          </label>
+
             <div class="controls">
             <%= f.url_field :soc_url, :value => "http://twitter.com/" %>
             </div>
@@ -30,11 +25,9 @@
       <div class="span4">
         <div class="control-group">
           <label class="left">
-          <%=link_to "Google+", "https://plus.google.com/", :target => "_blank" %><br />
+          <%=f.label "Google+ Profile URL" %>
           </label>
-          <label class="left">
-          <%= f.label "Home Page" %>
-          </label>
+
             <div class="controls">
             <%= f.text_field :soc_url, :value => "https://plus.google.com"  %>
             </div>
@@ -46,11 +39,9 @@
       <div class="span4">
         <div class="control-group">
           <label class="left">
-          <%=link_to "LinkedIn", "http://linkedin.com", :target => "_blank" %><br />
+          <%=f.label "LinkedIn Profile URL" %>
           </label>
-          <label class="left">
-          <%= f.label "Home Page" %>
-          </label>
+
             <div class="controls">
              <%= f.text_field :soc_url, :value => "http://linkedin.com/" %>
             </div>
@@ -59,11 +50,9 @@
       <div class="span4">
         <div class="control-group">
           <label class="left">
-         <%=link_to "MySpace", "http://myspace.com", :target => "_blank" %><br />
+         <%=f.label "MySpace Profile URL" %>
           </label>
-          <label class="left">
-          <%= f.label "Home Page" %>
-          </label>
+
             <div class="controls">
             <%= f.text_field :soc_url, :value => "http://myspace.com/" %>
             </div>
@@ -72,12 +61,9 @@
       <div class="span4">
         <div class="control-group">
         <label class="left">
-        Other<br />
+        <%= f.label "Other Profile URL" %>
         </label>
-          <label class="left">
-          <%= f.label "Home Page" %>
-          </label>
-            <div class="controls">
+          <div class="controls">
             <%= f.text_field :soc_url, :value => "http://" %>
             </div>
         </div>
