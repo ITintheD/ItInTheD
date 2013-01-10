@@ -3,13 +3,12 @@
   <div id="logo_container">
     <a href="/home"><img src="/assets/logo.png"></a>
   </div>
-  <!--<div id="nav_container" class='span9'>-->
-  <div id="nav_container" class='span9' style="margin-left:30px">
+
+  <div id="nav_container">
     
-    <div class='row' style="margin-left:0px">
-      <!--<ul id="social_nav" class='offset2 span3'>-->
-      <ul id="social_nav" class='offset2 span3' style="margin-left:230px">
-          <li><a href=""><img src="/assets/email_icon.png"></a></li>
+    <div class='row'>
+      <ul id="social_nav" class='offset2'>
+          <li><a href=""><i class="icon-white icon-book glyphw"></i></a></li>
           <li><a href=""><img src="/assets/twitter_icon.png"></a></li>
           <li><a href=""><img src="/assets/facebook_icon.png"></a></li>
           <li><a href=""><img src="/assets/youtube_icon.png"></a></li>
@@ -17,43 +16,34 @@
           <li class="last_item"><a href=""><img src="/assets/linked_icon.png"></a></li>
 
           <li>
-            <!-- <form id="demo" class="collapse width"> -->
-            <form id="demo">  
+
+            <form id="demo" class="collapse width">  
               <input type="text" class="input-medium search-query">  
               <button type="submit" class="btn">Search</button>  
             </form>
           </li>
           <li>
-            <!--<a href="#demo" data-toggle="collapse"><img src="/assets/gplus_icon.png"></a>-->
-            <a href="#demo"><img src="/assets/gplus_icon.png"></a>
+            <a href="#demo" data-toggle="collapse"><img src="/assets/gplus_icon.png"></a>
           </li>
-          <li>
-            <!--<form id="login" class="collapse width">-->
-            <form id="login">  
-              <input type="text" class="input-small" placeholder="Email">  
-              <input type="password" class="input-small" placeholder="Password">   
-              <button type="submit" class="btn">Sign in</button>  
-            </form>  
-          </li>
-
-           <li>
-            <a href="#login" data-toggle="collapse"><img src="/assets/gplus_icon.png"></a>
-          </li>
+         
       </ul>
     </div>
 
 
-    <div class='row' style="margin-left:0px">
-      <ul id="main_nav" class='span6'>
+    <div class='row'>
+      <ul id="main_nav">
         
-        <li><a href="/home">Home <img src="/assets/menu_drop_arrow.png"></a></li>
+        <li><a href="/home">Home</a></li>
           <li class="dropdown">
             <a href="" data-toggle="dropdown">Program <img src="/assets/menu_drop_arrow.png"></a>
             <ul class="dropdown-menu">
-              <li><a href=""> About Us </a></li>
-              <li><a href="/contactus"> Contact Us </a></li>
+              <li><a href="/about_us"> About Us </a></li>
+              <li><a href=""> Contact Us </a></li>
               <li><a href="/faqs"> F.A.Q </a></li>
-              <li class="last_item"><a href=""> Testimonials </a></li>
+              <li><a href=""> Schedule </a></li>
+              <li><a href=""> Inside View </a></li>
+              <li><a href=""> Testimonials </a></li>
+              <li class="last_item"><a href=""> Forum </a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -65,13 +55,24 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/Resources">Resources <img src="/assets/menu_drop_arrow.png"></a>
+            <a href="/Resources">Resources</a>
           </li>           
-        <li><a href="">Community <img src="/assets/menu_drop_arrow.png"></a></li>                  
-        <li class="last_item"><a href="/Users">Apply Now <img src="/assets/menu_drop_arrow.png"></a></li>  
+        <li><a href="">Community</a></li>                  
+        <li class="last_item"><a href="/Users">Apply Now</a></li>  
 
       </ul>
     </div>
   </div>
 
 
+
+<script>
+function check(input) {
+  if (input.value != document.getElementById('email_addr').value) {
+    input.setCustomValidity('The two email addresses must match.');
+  } else {
+    // input is valid -- reset the error message
+    input.setCustomValidity('');
+  }
+}
+</script>
