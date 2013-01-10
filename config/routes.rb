@@ -1,6 +1,8 @@
 ItInTheD::Application.routes.draw do
 
 
+  resources :testimonials
+
   resources :resources
 
   resources :events
