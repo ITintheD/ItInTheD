@@ -5,12 +5,15 @@ ItInTheD::Application.routes.draw do
 
   resources :events
 
+  resources :faq
+
   resources :org_types
+
+  resources :about_us
 
   resources :organizations
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout'}
 
-  resources :faqs
 
   resources :contactus
 
