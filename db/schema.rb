@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230042337) do
+ActiveRecord::Schema.define(:version => 20130109191701) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20121230042337) do
     t.integer  "resource_count"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "resource_type"
   end
 
   create_table "socials", :force => true do |t|
@@ -136,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20121230042337) do
     t.integer  "resume_file_size"
     t.datetime "resume_updated_at"
     t.string   "telephone"
+    t.string   "user_type"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
