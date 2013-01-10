@@ -203,7 +203,7 @@ div.content_title p{
 }
 
 
-#about_container h3, #faq_container, #contact_container h3{
+#about_container h3, #faq_container h3, #contact_container h3{
 	border-bottom: thin solid #E08628;
 	text-transform: uppercase;
 	color: #162D3F;
