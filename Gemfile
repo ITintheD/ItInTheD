@@ -21,6 +21,6 @@ gem 'httparty'
 
 #gem 'feedzirra'
 
-group :development 	do
-	gem 'capistrano'
-end
+#group :development 	do
+#	gem 'capistrano'
+#end

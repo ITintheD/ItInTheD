@@ -196,14 +196,14 @@ div.content_title p{
 }
 
 
-#about_container, #faq_container{
+#about_container, #faq_container, #contact_container, #community_container {
 	width: 600px;
 	float: left;
 	padding-right: 80px;
 }
 
 
-#about_container h3, #faq_container h3{
+#about_container h3, #faq_container h3, #contact_container h3, #community_container h3{
 	border-bottom: thin solid #E08628;
 	text-transform: uppercase;
 	color: #162D3F;
