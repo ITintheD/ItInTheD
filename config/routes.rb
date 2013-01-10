@@ -17,6 +17,8 @@ ItInTheD::Application.routes.draw do
 
   resources :contact_us
 
+  resources :community
+
   # match '/person/:id' => 'users#show'
   
   match '/search' => 'search#index', :as => :search
