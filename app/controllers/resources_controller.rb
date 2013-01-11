@@ -3,6 +3,7 @@ class ResourcesController < ApplicationController
   # GET /resources.json
   def index
     @resources = Resource.all
+    @link = Resource.find(params["Link"])
 
     respond_to do |format|
       format.html # index.html.erb
