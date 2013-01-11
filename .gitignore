@@ -14,6 +14,8 @@ public/assets/*
 *.swp
 *.out
 .svn
+#Gemfile conflict
+Gemfile.lock
 
 ##config specific files
 config/aws.yml
