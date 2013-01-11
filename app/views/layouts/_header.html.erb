@@ -6,8 +6,8 @@
 
   <div id="nav_container">
     
-    <div class='row'>
-      <ul id="social_nav" class='offset2'>
+    <div id="social_container">
+      <ul id="social_nav">
           <li><a href=""><i class="icon-white icon-book glyphw"></i></a></li>
           <li><a href=""><img src="/assets/twitter_icon.png"></a></li>
           <li><a href=""><img src="/assets/facebook_icon.png"></a></li>
@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class='row'>
+    <div id="main_nav_container">
       <ul id="main_nav">
         
         <li><a href="/home">Home</a></li>
@@ -66,13 +66,4 @@
 
 
 
-<script>
-function check(input) {
-  if (input.value != document.getElementById('email_addr').value) {
-    input.setCustomValidity('The two email addresses must match.');
-  } else {
-    // input is valid -- reset the error message
-    input.setCustomValidity('');
-  }
-}
-</script>
+

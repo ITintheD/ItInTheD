@@ -10,6 +10,12 @@
 
 
 
+
+#sidebar_container aside{
+	margin-bottom: 50px;
+}
+
+
 li form{
 	margin: 0;
 }
@@ -99,9 +105,7 @@ input.search-query{
 
 .MidContainer {
 	width: 980px !important;
-    margin-left: auto;
-    margin-right: auto;	
-    margin-bottom: 20px;	
+    margin:-40px auto 20px auto;
 }
 
 .FooterContainer{
@@ -123,9 +127,9 @@ input.search-query{
 }
 
 #nav_container{
-	width: 600px;
-	float:left;
-	margin: 15px 0px 0px 0px;	
+	width: 611px;
+	float:right;
+	margin: 33px 0px 0px 0px;	
 }
 
 
@@ -143,8 +147,15 @@ input.search-query{
 }
 
 
+
+#main_nav_container{
+	margin: 37px 0px 0px 0px;
+	float: right;
+}
+
+
 #main_nav li{
-	padding-right: 14px;
+	margin-right: 14px;
 }
 
 #main_nav li, #social_nav li{
@@ -152,10 +163,17 @@ input.search-query{
 	display: inline-block;
 }
 
+
+
+#social_container{
+	float: right;
+}
+
+
 #social_nav{
 	background-color: #e08628;
 	padding: 7px 15px;
-	width: 370px;
+	width: auto;
 }
 
 .dropdown-menu{
@@ -196,6 +214,29 @@ div.content_title p{
 }
 
 
+
+#home_sponsors ul li{
+	float: left;
+	list-style: none;
+	margin: 15px 50px 15px 0px;
+}
+
+
+
+
+#news_container{
+	width: 470px;
+	float: left;
+}
+
+
+#testimonial_container{
+	width: 470px;
+	margin:0px 0px 0px 40px;
+	float: left;
+}
+
+
 #about_container, #faq_container, #contact_container, #community_container {
 	width: 600px;
 	float: left;
@@ -215,6 +256,21 @@ div.content_title p{
 	width: 300px;
 	float: left;
 }
+
+
+
+#sponsors_widget ul{
+	margin: 10px 0px 0px 0px;
+}
+
+
+#sponsors_widget ul li{
+	float: left;
+	list-style: none;
+	display: inline-block;
+	padding-right: 10px;
+}
+
 
 
 a.accordion-toggle:hover{
