@@ -92,7 +92,7 @@ input.search-query{
 
 .HeaderContainer {
 	width: 980px !important;
-	height: 164px;
+	height: 124px;
     margin-left: auto;
     margin-right: auto;	
     margin-bottom: 20px;
@@ -105,7 +105,7 @@ input.search-query{
 
 .MidContainer {
 	width: 980px !important;
-    margin:-40px auto 20px auto;
+    margin: 0px auto 20px auto;
 }
 
 .FooterContainer{
