@@ -1,23 +1,20 @@
-<% provide(:video_title, 'Brad') %>
-<% provide(:video_number, "WheO3v0gh1Y") %>
+<% provide(:test_title, 'Brad') %>
+
+<!DOCTYPE html> 
 
 <h1>Testimonials</h1>
 
-  <div id="testimonial_container" class='span5' style="margin-left:20px">
-    <div class="content_title"> <p><%= yield (:video_title) %></p></div>
+  <div id="testimonial_container" class='span5' style="margin-left:40px">
+    <div class="content_title"> <p><%= yield (:test_title) %></p></div>
     <section>
-      <iframe width="470" height="315" src="http://www.youtube.com/embed/<%= yield(:video_number) %>" frameborder="2" allowfullscreen></iframe>
+      <iframe width="470" height="315" src="http://www.youtube.com/embed/mDxq1JFZ_wg" frameborder="0" allowfullscreen></iframe>
         
     </section>
   </div>
 
-<% print @@videos %>
 
 
 <% @testimonials.each do |testimonial| %>
-
-
-
   <tr>
     <td><%= testimonial.content %></td>
     <td><%= link_to 'Show', testimonial %></td>
