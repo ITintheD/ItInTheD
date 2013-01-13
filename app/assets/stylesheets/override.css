@@ -43,6 +43,10 @@ width: 980px !important;
 
 a:hover{
 	background:transparent !important;
+
+	/* This section is fine for a background that are non-white, 
+	   but causes issues with hover on backgrounds that are white, 
+	   causing it to disappear into the background */
 }
 
 .glyphw{
