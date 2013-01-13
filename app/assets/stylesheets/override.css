@@ -21,6 +21,11 @@
 	max-height:150px;
 }
 
+.image-carousel {
+	max-width:980px;
+	max-height:450px;
+}
+
 
 li form{
 	margin: 0;
