@@ -1,36 +1,51 @@
 /* jquery.minitwitter.js - http://minitwitter.webdevdesigner.com/
  	Copyright (c) 2012 Olivier Bréchet */
 
-.tweets {
+
+
+.content_tweets{
+	float: left;
+	width: 65%;
+	margin-top: 13px;
+} 	
+
+
+.avatar{
+	float: left;
+}
+
+
+.tweet {
 	max-width:520px;
 	font:13px/17px "Tahoma",Helvetica,Arial,sans-serif;
 	color:white;
 	margin:auto;
 	clear: both;
+	margin: 0 auto 20px auto;
 }
 
-.tweets a {
+.tweet a {
 	color:#E08628 !important;
 	text-decoration:none;
 }
 
-.tweets a:hover {
+.tweet a:hover {
 	text-decoration:underline;
 }
 
-.tweets .tweet {
+.tweet .tweet {
 	border-bottom:1px solid #e7e7e7;
 	padding:12px 12px;
 }
 
-.tweets .tweets_header {
+.tweet .tweet_header {
 	border-bottom:1px solid #e7e7e7;
 	padding:12px 12px;
 	font-weight:bold;
 	font-size:14px;
 }
 
-.tweets .tweets_header a {
+.tweet .tweet_header a {
 	color:#333 !important;
 	text-decoration:none !important;
 	font-weight:bold !important;
@@ -38,42 +53,42 @@
 	text-transform:lowercase !important;
 }
 
-.tweets .tweets_header a:hover {
+.tweet .tweet_header a:hover {
 	text-decoration:underline !important;
 }
 
-.tweets_footer {
+.tweet_footer {
 	padding:6px 12px;
 	text-align: center;
 }
 
-.tweets_footer span.powered {
+.tweet_footer span.powered {
 	font-size:9px;
 }
 
-.tweets_footer span.powered p {
+.tweet_footer span.powered p {
 	margin:0;
 	text-align: center;
 	font-size:9px;
 	color:#999;
 }
 
-.tweets_footer span.powered a {
+.tweet_footer span.powered a {
 	font-size:9px;
 	color:#999;
 	text-decoration:none;
 }
 
-.tweets_footer span.powered a:hover {
+.tweet_footer span.powered a:hover {
 	text-decoration:underline;
 }
 
-.tweets_footer #bird, .mt_footer .image_r {
+.tweet_footer #bird, .mt_footer .image_r {
 	background:url("http://twimg0-a.akamaihd.net/a/1331143368/t1/img/twitter_web_sprite_icons.png") no-repeat;
 }
 
 
-.tweets_footer #bird{
+.tweet_footer #bird{
 	display:inline-block;
 	margin:10px auto;
 	background-position: 0 0;
@@ -81,19 +96,19 @@
 	height: 26px;
 }
 
-.tweets .tweet .time {
+.tweet .tweet .time {
 	float:right;
 	color:#999;
 	font-size:11px;
 }
 
-.tweets .tweet .avatar {
+.tweet .tweet .avatar {
 	float:left;
 	margin-right:12px;
 	border-radius:5px;
 }
 
-.tweets .tweet .avatar img {
+.tweet .tweet .avatar img {
 	border-radius:5px;
 }
 
