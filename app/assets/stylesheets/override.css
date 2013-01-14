@@ -34,6 +34,7 @@
 .image-carousel {
 	max-width:980px;
 	max-height:450px;
+	margin:0 auto;
 }
 
 .image-carousel1 {
