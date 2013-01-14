@@ -15,6 +15,11 @@
 	margin-bottom: 50px;
 }
 
+#sidebar_container{
+	width: 300px;
+	float: left;
+}
+
 
 .image-size {
 	max-width:150px;
@@ -269,11 +274,6 @@ div.content_title p{
 #resources_container h3, #listingusers_container h3{
 	padding-top:15px;
 	margin-bottom:40px;
-}
-
-#sidebar_container{
-	width: 300px;
-	float: left;
 }
 
 
