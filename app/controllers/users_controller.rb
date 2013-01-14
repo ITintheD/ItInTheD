@@ -22,6 +22,19 @@ class UsersController < ApplicationController
     end
   end
   
+
+
+  def students
+    @students = User.find(:all, :conditions => { :user_type => 'Student' })
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
+    end
+  end
+
+
+
   def new
     @user = User.new
   end

@@ -13,6 +13,8 @@ ItInTheD::Application.routes.draw do
 
   resources :about_us
 
+  resources :students
+
   resources :organizations
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout'}
 
