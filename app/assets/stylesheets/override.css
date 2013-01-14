@@ -10,21 +10,21 @@
 
 
 
+.btn:hover{
+	background-color: #E08628 !important;
+}
+
 
 #sidebar_container aside{
 	margin-bottom: 50px;
 	margin-top:15px;
 }
 
-#sidebar_container, #sidebarcommunity_container{
+#sidebar_container{
 	width: 300px;
 	float: left;
 }
 
-#sidebarcommunity_container aside{
-	margin-bottom: 50px;
-	margin-top:0;
-}
 
 .image-size {
 	max-width:150px;
