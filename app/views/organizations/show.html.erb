@@ -1,63 +1,64 @@
-<h2><%= notice %></h2>
+
 
 <div class="row-fluid">
-  <div class="span3">
-<!--Sidebar logo content in its own div-->
-<!--so content below will top align-->
-    <div id="org_logo">
-      <a href=<%= @organization.org_url %> >
-      <!--<%= image_tag @organization.logo.url%>
-      <%= image_tag @organization.logo.url(:medium) %>-->
-      <%= image_tag @organization.logo.url(:thumb) %>
-    </a>
-  </div>
-</div>
-</div>
-<div class="row-fluid">
-  <div class="span3">
+  <div class="span3" style="background-color:white">
 <!--Sidebar text content-->
     <div class="content_title"><p>At a glance:</p></div>
-    <section id="box_padding">
-    <p class="clear">Year established: <%= @organization.org_start_year %></p>  
-    <p>Number in Organization: <%= @organization.org_num_students_employ %></p>
-    <p>Annual Income: $<%= @organization.org_annual_sales %></p>
 
-  </section>
-  <div>
-    <!--Space holder for additional content content-->
-    <p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</p>
+        <section>
+          <div id="org_logo">
+            <a href=<%= @organization.org_url %> >
+              <!--<%= image_tag @organization.logo.url%>
+              <%= image_tag @organization.logo.url(:medium) %>-->
+              <div class="image-size">
+                <%= image_tag @organization.logo.url %>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section id="box_padding">
+          <p class="clear">Year established: <%= @organization.org_start_year %></p>  
+          <p>Number in Organization: <%= @organization.org_num_students_employ %></p>
+          <p>Annual Income: $<%= @organization.org_annual_sales %></p>
+        </section>
+        <div>
+          <!--Space holder for additional content content-->
+          <p>&nbsp;<br />&nbsp;<br />&nbsp;</p>
+        </div>
+
+  </div>
+
+  <div class="span9" style="background-color:white">
+    <div class="content_title"></div>
+
+      <br/>
+      <!--Body content-->
+      <h2 id="no_topmarg"><%= @organization.name %></h2>
+      <p><%= @organization.address %></p>
+      <p><%= @organization.city %>, <%= @organization.org_state %> <%= @organization.zip %></p> 
+      <p><%= @organization.org_phone %></p>
+      <p><%= link_to @organization.org_url, @organization.org_url %></p>
+      <p><%= @organization.keyword_list %></p>                    
+      <!--Body 2 content-->
+      <p><strong>Summary</strong></p>
+      <p style="word-wrap:break-word; width:90ex"><%= @organization.description %>
+      </p>
+      <!--Body 3 content-->
+      <p><strong>Career Opportunities</strong><p>
+      <p><%= @organization.org_job %></p>
+
   </div>
 </div>
-  <div class="span9">
-    <!--Body content-->
-    <h2 id="no_topmarg"><%= @organization.name %></h2>
 
-    <p><%= @organization.address %></p>
 
-    <p><%= @organization.city %>, <%= @organization.org_state %> <%= @organization.zip %></p> 
-                
-    <p><%= @organization.org_phone %></p>
-           
-    <p><%= link_to @organization.org_url, @organization.org_url %></p>
 
-    <p><%= @organization.keyword_list %></p>                    
- 
-<!--Body 2 content-->
-    <p><strong>Summary</strong><p>
-     <p>             
-      <%= @organization.description %>
-    </p>
-<!--Body 3 content-->
-   <p><strong>Career Opportunities</strong><p>
-    <p>
-      <%= @organization.org_job %>   
-    </p>
-  </div>
-</div>
+
+
 
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
+
 
 
 

@@ -22,15 +22,18 @@
 
   <div id="resources" style="float:left">
     <ul>
-      <h5><a href="/Resources" style="color:white">Resources</a></h5>  
+      <li><h5><a href="/Resources" style="color:white">Resources</a></h5> </li>
+      <li><h5><a href="/community" style="color:white">Community</a></h5> </li>
+      <li><h5><a href="/users" style="color:white">Apply Now</a></h5> </li>
     </ul>  
   </div>
 
-  <div id="community" style="float:left">
-    <ul>
-      <h5> <a href="/community" style="color:white">Community</a></h5>  
-    </ul>  
-  </div> 
 
-  <div id="twitter_container" style="float:left">
-  </div>	
+
+  <div class="content_tweets"> </div> 
+    
+    <script type='text/javascript'>
+    jQuery('.content_tweets').miniTwitter({username: 'quickenloans', limit: 2});
+    </script>
+
+  </aside>

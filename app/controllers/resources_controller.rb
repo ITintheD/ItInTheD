@@ -3,7 +3,12 @@ class ResourcesController < ApplicationController
   # GET /resources.json
   def index
     @resources = Resource.all
-
+    @notes = Resource.where("resource_type = 'Notes'")
+    @images = Resource.where("resource_type = 'Images'")
+    @training = Resource.where("resource_type = 'Training'")
+    @links = Resource.where("resource_type = 'Links'")
+    @tools = Resource.where("resource_type = 'Tools'")
+    @help = Resource.where("resource_type = 'Help'")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @resources }
