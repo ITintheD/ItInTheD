@@ -13,13 +13,18 @@
 
 #sidebar_container aside{
 	margin-bottom: 50px;
+	margin-top:15px;
 }
 
-#sidebar_container{
+#sidebar_container, #sidebarcommunity_container{
 	width: 300px;
 	float: left;
 }
 
+#sidebarcommunity_container aside{
+	margin-bottom: 50px;
+	margin-top:0;
+}
 
 .image-size {
 	max-width:150px;
@@ -53,6 +58,11 @@ a:hover{
 	   but causes issues with hover on backgrounds that are white, 
 	   causing it to disappear into the background */
 }
+
+.btn-primary:hover{
+	color:#000;
+}
+
 
 .glyphw{
     background-image: url(/assets/glyphicons-halflings-white.png);
