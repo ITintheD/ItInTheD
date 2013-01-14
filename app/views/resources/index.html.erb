@@ -6,15 +6,64 @@
   <div id="resource_container" style="margin-left:0px", class="span5">
     <div class="content_title"><p> Notes from Session </p> </div>
     <section></br>
-      
-      Shankle turducken sirloin andouille turkey salami capicola flank meatball. Tenderloin rump turkey ham hock pig hamburger swine. Filet mignon jowl ham, frankfurter ham hock boudin pig pork turducken cow spare ribs pork loin meatball swine beef. Ham turkey capicola shankle, pork chop bresaola chicken biltong beef leberkas meatloaf turducken tenderloin pastrami jowl. Ball tip hamburger shankle ham chicken cow rump pastrami pancetta.
+      <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @notes.each do |notes| %>
+          <tr>
+            <td><%= notes.resource_title %></td>
+            <td><%= link_to notes.resource_url %></td>
+            <td><%= notes.resource_file %></td>
+            <td><%= notes.resource_count %></td>
+            <td><%= link_to 'Show', notes %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 
   <div id="resource2_container"  style="margin-left:40px", class="span5">
     <div class="content_title"><p> Images </p> </div>
     <section></br>
-      Boudin leberkas flank, swine ham shank jowl ribeye biltong pancetta pork chop pork. Frankfurter hamburger tongue doner fatback pastrami. T-bone pork chop strip steak, jerky biltong rump pork loin. Capicola spare ribs t-bone pork belly, ham hock tail sirloin ham ground round leberkas strip steak turkey shank brisket meatloaf. Short ribs andouille sirloin leberkas ball tip tongue, chicken meatball t-bone prosciutto ham. T-bone shank biltong tail hamburger frankfurter prosciutto corned beef strip steak short loin venison jerky short ribs.
+     <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @images.each do |images| %>
+          <tr>
+            <td><%= images.resource_title %></td>
+            <td><%= link_to images.resource_url %></td>
+            <td><%= images.resource_file %></td>
+            <td><%= images.resource_count %></td>
+            <td><%= link_to 'Show', images %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 </div>
@@ -23,14 +72,64 @@
   <div id="resource_container" style="margin-left:0px", class="span5">
     <div class="content_title"><p> Training </p> </div>
     <section></br>
-      Spare ribs kielbasa salami rump. Short ribs ground round spare ribs sirloin. Tail ground round t-bone hamburger. Capicola pork loin bacon short ribs venison brisket filet mignon tail pork spare ribs fatback. Swine shoulder turkey boudin, corned beef venison t-bone tenderloin pig meatloaf. Drumstick frankfurter pork chop meatball turkey pig, venison sirloin ham filet mignon tongue strip steak cow.
+      <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @training.each do |training| %>
+          <tr>
+            <td><%= training.resource_title %></td>
+            <td><%= link_to training.resource_url %></td>
+            <td><%= training.resource_file %></td>
+            <td><%= training.resource_count %></td>
+            <td><%= link_to 'Show', training %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 
   <div id="resource2_container"  style="margin-left:40px", class="span5">
     <div class="content_title"><p> Links </p> </div>
     <section></br>
-      Boudin pork loin tail, filet mignon pig shoulder jerky shankle cow. Shankle pancetta bacon, swine flank ground round doner rump short ribs brisket cow pork loin pastrami tail. Frankfurter shankle tongue sausage, meatball boudin corned beef jerky pancetta bresaola biltong turducken pork belly shank. Rump tail tri-tip ball tip shankle. Sausage filet mignon ground round, ribeye tri-tip doner ham hock bacon pastrami pork belly. Pork belly beef chicken flank.
+      <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @links.each do |links| %>
+          <tr>
+            <td><%= links.resource_title %></td>
+            <td><%= link_to links.resource_url %></td>
+            <td><%= links.resource_file %></td>
+            <td><%= links.resource_count %></td>
+            <td><%= link_to 'Show', links %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 </div>
@@ -38,45 +137,67 @@
   <div id="resource_container" style="margin-left:0px", class="span5">
     <div class="content_title"><p> Tools </p> </div>
     <section></br>
-      Shankle turducken sirloin andouille turkey salami capicola flank meatball. Tenderloin rump turkey ham hock pig hamburger swine. Filet mignon jowl ham, frankfurter ham hock boudin pig pork turducken cow spare ribs pork loin meatball swine beef. Ham turkey capicola shankle, pork chop bresaola chicken biltong beef leberkas meatloaf turducken tenderloin pastrami jowl. Ball tip hamburger shankle ham chicken cow rump pastrami pancetta.
+      <table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @tools.each do |tools| %>
+          <tr>
+            <td><%= tools.resource_title %></td>
+            <td><%= link_to tools.resource_url %></td>
+            <td><%= tools.resource_file %></td>
+            <td><%= tools.resource_count %></td>
+            <td><%= link_to 'Show', tools %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 
   <div id="resource2_container"  style="margin-left:40px", class="span5">
     <div class="content_title"><p> Help </p> </div>
     <section></br>
-      Boudin leberkas flank, swine ham shank jowl ribeye biltong pancetta pork chop pork. Frankfurter hamburger tongue doner fatback pastrami. T-bone pork chop strip steak, jerky biltong rump pork loin. Capicola spare ribs t-bone pork belly, ham hock tail sirloin ham ground round leberkas strip steak turkey shank brisket meatloaf. Short ribs andouille sirloin leberkas ball tip tongue, chicken meatball t-bone prosciutto ham. T-bone shank biltong tail hamburger frankfurter prosciutto corned beef strip steak short loin venison jerky short ribs.
+<table class="table table-striped">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>File</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+        <% @help.each do |help| %>
+          <tr>
+            <td><%= help.resource_title %></td>
+            <td><%= link_to help.resource_url %></td>
+            <td><%= help.resource_file %></td>
+            <td><%= help.resource_count %></td>
+            <td><%= link_to 'Show', help %></td>
+            <% if current_user %>
+              <%if current_user.user_type == "admin" %>
+            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+            <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     </section>
   </div>
 </div>
-
-
-
-
-<!--<table class="table table-striped">
-  <tr>
-    <th>Title</th>
-    <th>URL</th>
-    <th>File</th>
-    <th>View-count</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @resources.each do |resource| %>
-  <tr>
-    <td><%= resource.resource_title %></td>
-    <td><%= link_to resource.resource_url %></td>
-    <td><%= resource.resource_file %></td>
-    <td><%= resource.resource_count %></td>
-    <td><%= link_to 'Show', resource %></td>
-    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-    <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>-->
-
 <br />
 
 <div class="actions">
