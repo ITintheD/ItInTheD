@@ -260,13 +260,16 @@ div.content_title p{
 }
 
 
-#about_container h3, #faq_container h3, #contact_container h3, #community_container h3{
+#about_container h3, #faq_container h3, #contact_container h3, #community_container h3, #resources_container h3, #listingusers_container h3{
 	border-bottom: thin solid #E08628;
 	text-transform: uppercase;
 	color: #162D3F;
 }
 
-
+#resources_container h3, #listingusers_container h3{
+	padding-top:15px;
+	margin-bottom:40px;
+}
 
 #sidebar_container{
 	width: 300px;
