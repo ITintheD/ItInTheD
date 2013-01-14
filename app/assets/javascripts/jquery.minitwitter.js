@@ -129,7 +129,7 @@
 		    obj.writeTweet = obj.retweet ? object.retweeted_status.text : object.text;
 		    obj.finalText = $([linkURLs(obj.writeTweet, obj.entities)]).linkUser().linkHash()[0];
 		    obj.header = '<div class="mt_header"> <a '+rel()+' '+target()+' class="mt_user" href="'+obj.userUrl+'">'+obj.realName+'</a></div>';
-		    obj.avatar = '<div class="tweet"><div class="avatar"><a '+rel()+' '+target()+' class="mt_avatar" href="'+obj.userUrl+'"><img src="/assets/twitter_icon.png" alt="'+obj.realName+'\'s avatar" border="0"/></a></div>';
+		    obj.avatar = '<div class="tweet"><div class="avatar"><a '+rel()+' '+target()+' class="mt_avatar" href="'+obj.userUrl+'"><img src="/assets/tweet_bird.png" alt="'+obj.realName+'\'s avatar" border="0"/></a></div>';
 		    obj.textTweet = '<div class="mt_text">'+obj.finalText+'</div>';
 		    obj.footer = obj.retweet ? '<div class="mt_footer"><span class="image_r"></span>Retweeted by <a '+rel()+' '+target()+' class="mt_retweet" href="http://twitter.com/'+object.user.screen_name+'">'+object.user.name+'</a></div><div style="clear:both;"></div></div>' : '<div class="mt_footer"><div class="time">'+obj.tweetTime+' ago</div></div><div style="clear:both;"></div></div>';
 

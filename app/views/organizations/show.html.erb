@@ -1,12 +1,12 @@
 
 
 <div class="row-fluid">
-  <div class="span3">
+  <div class="span3" style="background-color:white">
 <!--Sidebar text content-->
     <div class="content_title"><p>At a glance:</p></div>
-      <div class="myboxouter">
+
         <section>
-          <div id="org_logo" style="background-color:white">
+          <div id="org_logo">
             <a href=<%= @organization.org_url %> >
               <!--<%= image_tag @organization.logo.url%>
               <%= image_tag @organization.logo.url(:medium) %>-->
@@ -25,12 +25,12 @@
           <!--Space holder for additional content content-->
           <p>&nbsp;<br />&nbsp;<br />&nbsp;</p>
         </div>
-      </div>
+
   </div>
 
-  <div class="span9">
+  <div class="span9" style="background-color:white">
     <div class="content_title"></div>
-    <div class="myboxouter">
+
       <br/>
       <!--Body content-->
       <h2 id="no_topmarg"><%= @organization.name %></h2>
@@ -46,7 +46,7 @@
       <!--Body 3 content-->
       <p><strong>Career Opportunities</strong><p>
       <p><%= @organization.org_job %></p>
-    </div>
+
   </div>
 </div>
 
