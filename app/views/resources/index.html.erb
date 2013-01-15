@@ -20,7 +20,7 @@
         <% @notes.each do |notes| %>
           <tr>
             <td><%= notes.resource_title %></td>
-            <td><%= link_to notes.resource_url %></td>
+            <td><%= link_to notes.resource_url, notes.resource_url %></td>
             <td><%= notes.resource_file %></td>
             <td><%= notes.resource_count %></td>
             <td><%= link_to 'Show', notes %></td>
@@ -52,7 +52,7 @@
         <% @images.each do |images| %>
           <tr>
             <td><%= images.resource_title %></td>
-            <td><%= link_to images.resource_url %></td>
+            <td><%= link_to images.resource_url, images.resource_url %></td>
             <td><%= images.resource_file %></td>
             <td><%= images.resource_count %></td>
             <td><%= link_to 'Show', images %></td>
@@ -86,7 +86,7 @@
         <% @training.each do |training| %>
           <tr>
             <td><%= training.resource_title %></td>
-            <td><%= link_to training.resource_url %></td>
+            <td><%= link_to training.resource_url, training.resource_url %></td>
             <td><%= training.resource_file %></td>
             <td><%= training.resource_count %></td>
             <td><%= link_to 'Show', training %></td>
@@ -118,7 +118,7 @@
         <% @links.each do |links| %>
           <tr>
             <td><%= links.resource_title %></td>
-            <td><%= link_to links.resource_url %></td>
+            <td><%= link_to links.resource_url, links.resource_url %></td>
             <td><%= links.resource_file %></td>
             <td><%= links.resource_count %></td>
             <td><%= link_to 'Show', links %></td>
@@ -151,7 +151,7 @@
         <% @tools.each do |tools| %>
           <tr>
             <td><%= tools.resource_title %></td>
-            <td><%= link_to tools.resource_url %></td>
+            <td><%= link_to tools.resource_url, tools.resource_url %></td>
             <td><%= tools.resource_file %></td>
             <td><%= tools.resource_count %></td>
             <td><%= link_to 'Show', tools %></td>
@@ -183,7 +183,7 @@
         <% @help.each do |help| %>
           <tr>
             <td><%= help.resource_title %></td>
-            <td><%= link_to help.resource_url %></td>
+            <td><%= link_to help.resource_url, help.resource_url %></td>
             <td><%= help.resource_file %></td>
             <td><%= help.resource_count %></td>
             <td><%= link_to 'Show', help %></td>
