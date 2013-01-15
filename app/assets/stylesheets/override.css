@@ -292,7 +292,7 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
-#about_container a, #faq_container a, #contact_container a, #community_container a, #resources_container a{
+#community_container .accordion a{
   color: #000;
   &:visited {
     color: #000;
