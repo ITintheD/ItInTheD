@@ -27,8 +27,12 @@
     <td><%= link_to organization.org_url, organization.org_url %></td>
     <td><%= organization.keyword_list %></td>
     <td><%= link_to 'Show', organization %></td>
+        <% if current_user %>
+            <%if current_user.user_type == "admin" %>
     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
     <td><%= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
+    <% end %>
   </tr>
 <% end %>
 </table>
