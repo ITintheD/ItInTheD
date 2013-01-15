@@ -292,6 +292,16 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
+#about_container a, #faq_container a, #contact_container a, #community_container a, #resources_container a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
 
 
 #sponsors_widget ul{
