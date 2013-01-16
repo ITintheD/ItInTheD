@@ -59,12 +59,11 @@ a:hover{
 	   causing it to disappear into the background */
 }
 
-input[type="submit"].btn{*padding-top:3px;*padding-bottom:3px;color:#fff;background-color: #006dcc;}input[type="submit"].btn:hover{color:#000;background-color:#E08628;}
-
 
 .btn-primary:hover{
 	color:#000;
 	background-color: #E08628 !important;
+	background-repeat: no-repeat;
 }
 
 .btn:hover{
