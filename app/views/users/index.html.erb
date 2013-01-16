@@ -1,5 +1,5 @@
 <div id="listingusers_container">
-<h3>Listing users</h3>
+<h3>Users</h3>
 
 <table class="table table-striped">
   <tr>
@@ -28,7 +28,7 @@
 
 <br />
 
-<a class="btn btn-primary btn-large" <%= link_to 'Sign up', new_user_registration_path %> </a>
+<a class="btn btn-primary btn-large" <%= link_to 'Apply Now', new_user_registration_path %> </a>
 <%-if user_signed_in?%>
   <a class="btn btn-primary btn-large" <%= link_to "Logout", destroy_user_session_path, :method => :delete %></a>
 <%-else %>

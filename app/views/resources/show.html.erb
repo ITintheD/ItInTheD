@@ -8,19 +8,22 @@
 	<b>Type:</b>
 	<%= @resource.resource_type %>
 </p>
+<% if !@resource.resource_url.blank? %>
 <p>
   <b>URL:</b>
   <%= link_to @resource.resource_url, @resource.resource_url %>
 </p>
-
+<% end %>
+<% if !@resource.attachment_file_size.blank? %>
 <p>
   <b>File:</b>
-  <%= @resource.resource_file %>
+      <td><%= link_to @resource.attachment_file_name, @resource.attachment.url %></td>
 </p>
+<% end %>
 
-<p>
-  <b>View-count:</b>
-  <%= @resource.resource_count %>
-</p>
+<% if current_user %>
+  <% if current_user.user_type == "admin" %>
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
+  <% end %>
+<% end %>
 <%= link_to 'Back', resources_path %>

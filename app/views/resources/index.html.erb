@@ -10,8 +10,9 @@
       <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -20,16 +21,16 @@
         <% @notes.each do |notes| %>
           <tr>
             <td><%= notes.resource_title %></td>
-            <td><%= link_to notes.resource_url, notes.resource_url %></td>
-            <td><%= notes.resource_file %></td>
+            <% if !notes.resource_url.blank? %>
+            <td><%= link_to truncate(notes.resource_url, :ommision => "...", :length => 20), notes.resource_url %></td>
+            <% end %>
+            <% if !notes.attachment_file_size.blank? %>
+            <td><%= link_to truncate(notes.attachment_file_name, :ommision => "...", :length => 20), notes.attachment.url %></td>
+            <% end %>
             <td><%= notes.resource_count %></td>
             <td><%= link_to 'Show', notes %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(notes) %></td>
+            <td><%= link_to 'Destroy', notes, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>
@@ -42,8 +43,8 @@
      <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -52,16 +53,16 @@
         <% @images.each do |images| %>
           <tr>
             <td><%= images.resource_title %></td>
-            <td><%= link_to images.resource_url, images.resource_url %></td>
-            <td><%= images.resource_file %></td>
+            <% if !images.resource_url.blank? %>
+            <td><%= link_to truncate(images.resource_url, :ommision => "...", :length => 20), images.resource_url %></td>
+            <% end %>
+            <% if !images.attachment_file_size.blank? %>
+            <td><%= link_to truncate(images.attachment_file_name, :ommision => "...", :length => 20), images.attachment.url %></td>
+            <% end %>
             <td><%= images.resource_count %></td>
             <td><%= link_to 'Show', images %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(images) %></td>
+            <td><%= link_to 'Destroy', images, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>
@@ -76,8 +77,8 @@
       <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -86,16 +87,16 @@
         <% @training.each do |training| %>
           <tr>
             <td><%= training.resource_title %></td>
-            <td><%= link_to training.resource_url, training.resource_url %></td>
-            <td><%= training.resource_file %></td>
+            <% if !training.resource_url.blank? %>
+            <td><%= link_to truncate(training.resource_url, :ommision => "...", :length => 20), training.resource_url %></td>
+            <% end %>
+            <% if !training.attachment_file_size.blank? %>
+            <td><%= link_to truncate(training.attachment_file_name, :ommision => "...", :length => 20), training.attachment.url %></td>
+            <% end %>
             <td><%= training.resource_count %></td>
             <td><%= link_to 'Show', training %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(training) %></td>
+            <td><%= link_to 'Destroy', training, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>
@@ -108,8 +109,8 @@
       <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -118,16 +119,16 @@
         <% @links.each do |links| %>
           <tr>
             <td><%= links.resource_title %></td>
-            <td><%= link_to links.resource_url, links.resource_url %></td>
-            <td><%= links.resource_file %></td>
+            <% if !links.resource_url.blank? %>
+            <td><%= link_to truncate(links.resource_url, :ommision => "...", :length => 20), links.resource_url %></td>
+            <% end %>
+            <% if !links.attachment_file_size.blank? %>
+            <td><%= link_to truncate(links.attachment_file_name, :ommision => "...", :length => 20), links.attachment.url %></td>
+            <% end %>
             <td><%= links.resource_count %></td>
             <td><%= link_to 'Show', links %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(links) %></td>
+            <td><%= link_to 'Destroy', links, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>
@@ -141,8 +142,8 @@
       <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -151,16 +152,16 @@
         <% @tools.each do |tools| %>
           <tr>
             <td><%= tools.resource_title %></td>
-            <td><%= link_to tools.resource_url, tools.resource_url %></td>
-            <td><%= tools.resource_file %></td>
+            <% if !tools.resource_url.blank? %>
+            <td><%= link_to truncate(tools.resource_url, :ommision => "...", :length => 20), tools.resource_url %></td>
+            <% end %>
+            <% if !tools.attachment_file_size.blank? %>
+            <td><%= link_to truncate(tools.attachment_file_name, :ommision => "...", :length => 20), tools.attachment.url %></td>
+            <% end %>
             <td><%= tools.resource_count %></td>
             <td><%= link_to 'Show', tools %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(tools) %></td>
+            <td><%= link_to 'Destroy', tools, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>
@@ -170,11 +171,11 @@
   <div id="resource2_container"  style="margin-left:40px", class="span5">
     <div class="content_title"><p> Help </p> </div>
     <section></br>
-<table class="table table-striped">
+     <table class="table table-striped">
         <tr>
           <th>Title</th>
-          <th>URL</th>
-          <th>File</th>
+          <th>URL or Attachment</th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -183,16 +184,16 @@
         <% @help.each do |help| %>
           <tr>
             <td><%= help.resource_title %></td>
-            <td><%= link_to help.resource_url, help.resource_url %></td>
-            <td><%= help.resource_file %></td>
+            <% if !help.resource_url.blank? %>
+            <td><%= link_to truncate(help.resource_url, :ommision => "...", :length => 20), help.resource_url %></td>
+            <% end %>
+            <% if !help.attachment_file_size.blank? %>
+            <td><%= link_to truncate(help.attachment_file_name, :ommision => "...", :length => 20), help.attachment.url %></td>
+            <% end %>
             <td><%= help.resource_count %></td>
             <td><%= link_to 'Show', help %></td>
-            <% if current_user %>
-              <%if current_user.user_type == "admin" %>
-            <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-            <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-            <% end %>
-            <% end %>
+            <td><%= link_to 'Edit', edit_resource_path(help) %></td>
+            <td><%= link_to 'Destroy', help, confirm: 'Are you sure?', method: :delete %></td>
           </tr>
         <% end %>
       </table>

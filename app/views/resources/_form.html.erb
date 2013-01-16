@@ -24,7 +24,7 @@
         <div class="span4">
           <div class="field" style="float:center">
             <%= f.label "URL" %>
-            <%= f.url_field :resource_url, :value => 'http://' %>
+            <%= f.text_field :resource_url %>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="span4">
           <div class="field" style="float:center">
             <%= f.label "File" %>
-            <%= f.file_field :resource_file %>
+            <%= f.file_field :attachment %>
           </div>
         </div>
         <div class="span4">
