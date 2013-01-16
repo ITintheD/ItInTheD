@@ -50,6 +50,7 @@ class UsersController < ApplicationController
   end
   
   def update
+    raise
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
     redirect_to show_people_path(@user)

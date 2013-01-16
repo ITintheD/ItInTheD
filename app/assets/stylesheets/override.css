@@ -187,6 +187,7 @@ input.search-query{
 
 #main_nav_container{
 	margin: 37px 0px 0px 0px;
+	width:615px;
 	float: right;
 }
 
@@ -292,6 +293,16 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
+#community_container .accordion a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
 
 
 #sponsors_widget ul{
@@ -337,7 +348,7 @@ footer h4{
 }
 
 
-#footer_program li, #team_nav li, #resources li, #community li{
+#footer_program li, #team_nav li, #resources li, #community li, #apply li{
 	list-style: none;
 	height: 160;
 	font-family: 'Arial', sans-serif;
@@ -345,6 +356,6 @@ footer h4{
 }
 
 
-#footer_program li a, #team_nav li a, #resources li a, #community li a{
+#footer_program li a, #team_nav li a, #resources li a, #community li a, #apply li a{
 	color: white;
 }

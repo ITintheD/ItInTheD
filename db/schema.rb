@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110123553) do
+ActiveRecord::Schema.define(:version => 20130115210425) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -70,9 +70,13 @@ ActiveRecord::Schema.define(:version => 20130110123553) do
     t.string   "resource_url"
     t.string   "resource_file"
     t.integer  "resource_count"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.string   "resource_type"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   create_table "socials", :force => true do |t|

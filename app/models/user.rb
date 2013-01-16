@@ -14,8 +14,6 @@ class User < ActiveRecord::Base
  # end
 
   has_attached_file :avatar,
-                    :url => '/system/:class/:attachment/:id/:style/:filename', 
-                    :styles => { :medium => "300x300>", 
-                                   :thumb => "100x100>" }
+                    :url => '/system/:class/:attachment/:id/:style/:filename'
 
 end

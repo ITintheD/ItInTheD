@@ -6,7 +6,7 @@
           
                 <p>
                   
-                  <%= image_tag @user.avatar.url(:thumb) %>
+                  <%= image_tag @user.avatar.url %>
                   
                 </p> 
 
@@ -33,11 +33,7 @@
       <p>             
       <%= @user.summary %>
       </p>
-      </p>               
-       <p><p>  <Strong>Resume</Strong></p>
-         <p> <!--<a href="<#%= @user.resume.url %> "> <#%= image_tag("/assets/resume.png", :alt => "Resume") %>--></a>         
-           
-       </p>           
+      </p>                      
                 
 </div>
 <div>
@@ -52,9 +48,7 @@
 </div>
 
 </div>
-<% if current_user %>
 <%= link_to 'Edit', edit_people_path(@user) %> |
-<% end %>
 <%= link_to 'Back', users_path %>
 
 
