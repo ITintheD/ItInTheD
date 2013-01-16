@@ -1,73 +1,20 @@
-<!--Test ability to pass a variable to the iframe-->
-<% provide(:video_title, 'Brad') %>
-<!--<% provide(:video_number, "WheO3v0gh1Y") %>
 
-<h1>Testimonials</h1>
-
-  <div id="testimonial_container" class='span5' style="margin-left:20px">
-    <div class="content_title"> <p><yield (:video_title) %></p><div> -->
-<!--SUCCESS-->
-
-
-   <!--Keep for cut/paste - remember to add embedding...
-   <section>
-      <iframe width="470" height="315" src="http://www.youtube.com/embed/
-      #yield(:video_number)" frameborder="2" allowfullscreen></iframe>-->
-   
-<!--Test for passing Greeked Youtube username to Youtube Class Method-->
-
-<!--% provide(:greeked_username, "UC3sD2LbS9knGoDeANxiUbFw") % -->
-
-<!-- videos = [ Youtube::`get_videos(:greeked_username) ] % -->
-
-<!--Created Name Routing isssues - switched threadsafe! on in config/production.rb-->
-
-<!--Multi-Jason decode:Error - no workaround? https://github.com/jnunemaker/httparty/issues/170 -->
 
 <h3>TESTIMONIALS</h3>
 
-<div id="testimonial_container" class='span5' style="margin-left:40px">
-
-    <section>
+<div id="testimonial_container" class='span5' style="margin-left:20px">
+    <div class="content_title"> <p>Testimonials</p> </div>
     <!--  <ul>!-->
       <!--<#% @entries.each do |entry| %>
         <li><#%= link_to entry.title, entry.url %></li>
       <#% end %>-->
     <!--  </ul>!-->
-    </section>
-
-    <div id="testimonial_container" >
-    <div class="content_title"> <p>Testimonials</p> </div>
+  
     <section>
-    <iframe width="480" title="YouTube video player" src="http://www.youtube.com/embed/cpcxm6yjJ80?HD=1;wmode=opaque;rel=0;showinfo=0;controls=0;title=0" height="270" frameborder="4"></iframe>
+    <iframe width="480" height="270" src="http://www.youtube.com/embed/0_UAvAQCXMU?HD=1;wmode=opaque;rel=0;showinfo=0;controls=0;title=0" height="270" frameborder="4"></iframe>
     </section>
-  </div>
+</div>
    
-   <!--<%= videos = Youtube.get_videos("UC3sD2LbS9knGoDeANxiUbFw")%>-->
 
-       <%= titles = Youtitle.get_titles("UC3sD2LbS9knGoDeANxiUbFw")%>
- 
-    <!--<% videos.(titles).each do |video, title| %>-->
-
-   <% titles.each do |title| %>
-
-        <div class="content_title">
-        <p><%= title%></p>
-        </div>
-
-      <section>
-      <iframe width="470" height="315" src="http://www.youtube.com/embed/<%= video%>" frameborder="0" allowfullscreen></iframe>
-      </section>
- 
-  </div>
-
-<div id="testimonial_container" class='span5' style="margin-left:40px">
-
-<% end %>
-
-    </div>
-
-<!--<% $end %>-->
-
-<% end %>
+<% $end %>
 

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3'
 gem 'devise'
 gem "paperclip", "~> 3.0"
 gem 'twitter'
@@ -13,6 +12,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'mysql2'
+end
+
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'jquery-rails'
 gem 'youtube_it'
@@ -21,6 +24,6 @@ gem 'httparty'
 
 #gem 'feedzirra'
 
-#group :development 	do
-#	gem 'capistrano'
-#end
+group :development 	do
+  gem 'sqlite3'
+end
