@@ -348,7 +348,7 @@ footer h4{
 }
 
 
-#footer_program li, #team_nav li, #resources li, #community li{
+#footer_program li, #team_nav li, #resources li, #community li, #apply li{
 	list-style: none;
 	height: 160;
 	font-family: 'Arial', sans-serif;
@@ -356,6 +356,6 @@ footer h4{
 }
 
 
-#footer_program li a, #team_nav li a, #resources li a, #community li a{
+#footer_program li a, #team_nav li a, #resources li a, #community li a, #apply li a{
 	color: white;
 }

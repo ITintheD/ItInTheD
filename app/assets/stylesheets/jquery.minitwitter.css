@@ -5,7 +5,7 @@
 
 .content_tweets{
 	float: left;
-	width: 65%;
+	width: 53%;
 	margin-top: 13px;
 } 	
 
@@ -16,7 +16,7 @@
 
 
 .tweet {
-	max-width:520px;
+	max-width:450px;
 	font:13px/17px "Tahoma",Helvetica,Arial,sans-serif;
 	color:white;
 	margin:auto;
