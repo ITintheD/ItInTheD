@@ -6,13 +6,14 @@ class Youtitle
     array_of_titles = []
     json["feed"]["entry"].each do |video|
       key =  video["title"]["$t"]
+      
       #How to parse and regex the youtube title key
       #key = video["id"]["$t"].split("/")
 
       #Load keys into the array we defined earlier
       array_of_titles << key
     end
-    raise array_of_titles.inspect
+    #raise array_of_titles.inspect
     return array_of_titles
   end
 end
