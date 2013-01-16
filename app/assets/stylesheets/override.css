@@ -301,6 +301,17 @@ div.content_title p{
   }
 }
 
+#showsponsor a, #editsponsor a, #destroysponsor a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
+
 
 #sponsors_widget ul{
 	margin: 10px 0px 0px 0px;
