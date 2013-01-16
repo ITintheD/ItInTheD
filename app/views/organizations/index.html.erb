@@ -29,9 +29,19 @@
     <td><%= organization.zip %></td>
     <td><%= link_to organization.org_url, organization.org_url %></td>
     <td><%= organization.keyword_list %></td>
+<<<<<<< HEAD
     <td><%= link_to 'Show', organization %></td>
     <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
     <td><%= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete %></td>
+=======
+    <td id="showsponsor"><%= link_to 'Show', organization %></td>
+        <% if current_user %>
+            <%if current_user.user_type == "admin" %>
+    <td id="editsponsor"><%= link_to 'Edit', edit_organization_path(organization) %></td>
+    <td id="destroysponsor"><%= link_to 'Destroy', organization, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
+    <% end %>
+>>>>>>> f549945ff9042e65df9600fe08b9250e23ef2996
   </tr>
 <% end %>
 </table>

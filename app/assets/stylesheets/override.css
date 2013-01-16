@@ -8,9 +8,6 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-.btn:hover{
-	background-color: #E08628 !important;
-}
 
 #sidebar_container aside{
 	margin-bottom: 50px;
@@ -62,10 +59,18 @@ a:hover{
 	   causing it to disappear into the background */
 }
 
+input[type="submit"].btn{*padding-top:3px;*padding-bottom:3px;color:#fff;background-color: #006dcc;}input[type="submit"].btn:hover{color:#000;background-color:#E08628;}
+
+
 .btn-primary:hover{
 	color:#000;
+	background-color: #E08628 !important;
 }
 
+.btn:hover{
+	color:#000;
+	background-color: #E08628 !important;
+}
 
 .glyphw{
     background-image: url(/assets/glyphicons-halflings-white.png);
@@ -290,7 +295,7 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
-#community_container .accordion a, #applynow a{
+#community_container .accordion a, #applynow a, #showsponsor a, #editsponsor a, #destroysponsor a, #showuser a, #edituser a, #destroyuser a{
   color: #000;
   &:visited {
     color: #000;
