@@ -1,0 +1,2 @@
+module YoutitleHelper
+end

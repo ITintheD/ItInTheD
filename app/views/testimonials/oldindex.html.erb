@@ -27,29 +27,12 @@
 <h3>TESTIMONIALS</h3>
 
 <div id="testimonial_container" class='span5' style="margin-left:40px">
-
-    <section>
-    <!--  <ul>!-->
-      <!--<#% @entries.each do |entry| %>
-        <li><#%= link_to entry.title, entry.url %></li>
-      <#% end %>-->
-    <!--  </ul>!-->
-    </section>
-
-    <div id="testimonial_container" >
-    <div class="content_title"> <p>Testimonials</p> </div>
-    <section>
-    <iframe width="480" title="YouTube video player" src="http://www.youtube.com/embed/cpcxm6yjJ80?HD=1;wmode=opaque;rel=0;showinfo=0;controls=0;title=0" height="270" frameborder="4"></iframe>
-    </section>
-  </div>
    
-   <!--<%= videos = Youtube.get_videos("UC3sD2LbS9knGoDeANxiUbFw")%>-->
+   <%= videos = Youtube.get_videos("UC3sD2LbS9knGoDeANxiUbFw")%>
 
-       <%= titles = Youtitle.get_titles("UC3sD2LbS9knGoDeANxiUbFw")%>
+   <%= titles = Youtitle.get_titles("UC3sD2LbS9knGoDeANxiUbFw")%>
  
-    <!--<% videos.(titles).each do |video, title| %>-->
-
-   <% titles.each do |title| %>
+    <% videos.(titles).each do |video, title| %>
 
         <div class="content_title">
         <p><%= title%></p>
@@ -67,7 +50,5 @@
 
     </div>
 
-<!--<% $end %>-->
-
-<% end %>
+<% $end %>
 
