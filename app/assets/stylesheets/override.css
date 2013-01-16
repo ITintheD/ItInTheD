@@ -294,7 +294,7 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
-#community_container .accordion a, #applynow a, #showsponsor a, #editsponsor a, #destroysponsor a, #showuser a, #edituser a, #destroyuser a{
+#community_container .accordion-inner a, #applynow a, #showsponsor a, #editsponsor a, #destroysponsor a, #showuser a, #edituser a, #destroyuser a{
   color: #000;
   &:visited {
     color: #000;
