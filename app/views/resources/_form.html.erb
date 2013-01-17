@@ -24,7 +24,7 @@
         <div class="span4">
           <div class="field" style="float:center">
             <%= f.label "URL" %>
-            <%= f.text_field :resource_url %>
+            <%= f.url_field :resource_url, :value => "http://" %>
           </div>
         </div>
       </div>
