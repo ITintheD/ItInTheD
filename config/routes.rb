@@ -23,6 +23,11 @@ ItInTheD::Application.routes.draw do
 
   resources :community
 
+
+  resources :inquiries, :only => [:contact_us, :create] do
+  get 'thank_you', :on => :collection
+  end
+
   # match '/person/:id' => 'users#show'
   
   match '/search' => 'search#index', :as => :search
