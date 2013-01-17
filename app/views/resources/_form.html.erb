@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <div class="content_title"><p>New Resource</p></div>
+  <div class="content_title"><p>Resource</p></div>
     <div class="myboxinner">
       <div class="row-fluid">
         <div class="span4">
@@ -24,7 +24,7 @@
         <div class="span4">
           <div class="field" style="float:center">
             <%= f.label "URL" %>
-            <%= f.text_field :resource_url %>
+            <%= f.url_field :resource_url, :value => "http://" %>
           </div>
         </div>
       </div>

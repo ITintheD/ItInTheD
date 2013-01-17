@@ -1,4 +1,4 @@
-<h2><%= notice %></h2>
+<h3><%= notice %></h3>
 
 <p>
   <b>Title:</b>
@@ -23,7 +23,11 @@
 
 <% if current_user %>
   <% if current_user.user_type == "admin" %>
+<div id="linkcontainer3r">
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
+</div>
   <% end %>
 <% end %>
-<%= link_to 'Back', resources_path %>
+<div id="linkcontainer33r">
+  <%= link_to 'Back', resources_path %>
+</div>

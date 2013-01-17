@@ -8,9 +8,6 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-.btn:hover{
-	background-color: #E08628 !important;
-}
 
 #sidebar_container aside{
 	margin-bottom: 50px;
@@ -62,10 +59,17 @@ a:hover{
 	   causing it to disappear into the background */
 }
 
+
 .btn-primary:hover{
 	color:#000;
+	background-color: #E08628 !important;
+	background-repeat: no-repeat;
 }
 
+.btn:hover{
+	color:#000;
+	background-color: #E08628 !important;
+}
 
 .glyphw{
     background-image: url(/assets/glyphicons-halflings-white.png);
@@ -140,6 +144,7 @@ input.search-query{
 	width: 980px !important;
     margin: 70px auto 20px auto;
 }
+
 
 .FooterContainer{
 	width: 980px !important;
@@ -290,7 +295,7 @@ div.content_title p{
 	margin-bottom:40px;
 }
 
-#community_container .accordion a, #applynow a{
+#resource_container a, #resource1_container a, #resource2_container a, #resource3_container a, #resource4_container a, #resource5_container a, #community_container .accordion-inner a, #applynow a, #showsponsor a, #editsponsor a, #destroysponsor a, #linksponsor a,  #showuser a, #edituser a, #destroyuser a{
   color: #000;
   &:visited {
     color: #000;
@@ -300,6 +305,50 @@ div.content_title p{
     background-color: #000;
   }
 }
+
+#linkcontainer1r a, #linkcontainer11r a, #linkcontainer2r a, #linkcontainer22r a, #linkcontainer3r a, #linkcontainer33r a, #linkcontainer4r a, #linkcontainer44r a, #linkcontainer5r a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
+
+#linkcontainer1o a, #linkcontainer11o a, #linkcontainer2o a, #linkcontainer22o a, #linkcontainer3o a, #linkcontainer33o a, #linkcontainer4o a, #linkcontainer44o a, #linkcontainer5o a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
+
+#linkcontainer1u a, #linkcontainer11u a, #linkcontainer2u a, #linkcontainer22u a, #linkcontainer3u a, #linkcontainer33u a, #linkcontainer4u a, #linkcontainer44u a, #linkcontainer5u a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
+#linkcontainer1p a, #linkcontainer1resend a{
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+  &:hover {
+    color: #162D3F;
+    background-color: #000;
+  }
+}
+
 
 
 #sponsors_widget ul{
@@ -345,14 +394,85 @@ footer h4{
 }
 
 
-#footer_program li, #team_nav li, #resources li, #community li, #apply li{
+#footer_program ul li, #team_nav ul li, #resources ul li, #community ul li, #apply ul li{
 	list-style: none;
 	height: 160;
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
+	list-style: none;
 }
 
 
 #footer_program li a, #team_nav li a, #resources li a, #community li a, #apply li a{
 	color: white;
 }
+
+
+
+
+
+
+#student{
+	color: #162d3f;
+}
+
+
+#student_container{
+	margin: 25px 0px 0px 0px;
+}
+
+
+.student_profile{
+	float: left;
+	width: 300px;
+	padding-right: 25px;
+
+}
+
+.student_profile img{
+	width: 75px;
+	float: left;
+}
+
+.student_info{
+	margin: -12px 0px 0px 84px;
+}
+
+
+.student_info h6{
+	margin: -4px 0px 0px 0px;
+	color: #aeaeae;
+}
+
+
+.student_description{
+	margin-top: 10px;
+}
+
+
+
+.news_article{
+	margin-bottom: 55px;
+}
+
+
+.news_title{
+	font-size: 16px;
+	margin: 4px 0 0 100px;
+	line-height: 21px;
+}
+
+.news_avatar{
+	float: left;
+}
+
+
+.news_avatar span{
+	border:thin solid #aeaeae;
+	padding: 5px;
+}
+
+
+
+
+

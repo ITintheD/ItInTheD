@@ -1,11 +1,27 @@
-<h1>IT in The D Students</h1>
+<h3 id="students">IT in The D Students</h3>
+
+
+<div id="student_container">
 
 <% @students.each do |user| %>
 
-<%= image_tag user.avatar.url(:thumb) %>
-<%= user.first_name %>
-<%= user.last_name %>
-<%= user.summary%>
+
+
+	<div class="student_profile">
+	<%= image_tag user.avatar.url %>
+
+	<div class="student_info">
+		<h4><%= user.first_name %> <%= user.last_name %></h4>
+		<h6><%= user.city %>, <%= user.state %></h6>
+		<h6><%= user.email %></h6>	
+	</div>
+
+	<section class="student_description">
+	<%= user.summary%>
+	</section>
+	</div>
+
 
 
 <% end %>
+</div>
