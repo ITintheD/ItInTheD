@@ -338,7 +338,7 @@ div.content_title p{
     background-color: #000;
   }
 }
-#linkcontainer1p a, #linkcontainer1resend a{
+#linkcontainer1p a, #linkcontainer1resend a, #linkcontainer1signup a, #linkcontainer1login a, #linkcontainer1forgotpass a, #linkcontainer1confirmation a, #linkcontainer1intructions a, #linkcontainer1loginwith a{
   color: #000;
   &:visited {
     color: #000;

@@ -14,6 +14,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1.json
   def show
     @organization = Organization.find(params[:id])
+    @socials = @organization.socials
 
     respond_to do |format|
       format.html # show.html.erb

@@ -45,7 +45,7 @@
       </p>
       <!--Body 3 content-->
       <p><strong>Social Networks</strong><p>
-            <p><%= @organization.socials %></p>  
+        <%= render :partial => 'organizations/soc_url', :collection => @socials, :as => :socials  %>
 
   </div>
 </div>
