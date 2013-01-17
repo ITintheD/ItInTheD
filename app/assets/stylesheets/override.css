@@ -422,30 +422,30 @@ footer h4{
 }
 
 
-.student_profile{
+.student_profile, .instructor_profile{
 	float: left;
 	width: 300px;
 	padding-right: 25px;
 
 }
 
-.student_profile img{
+.student_profile img, .instructor_profile img{
 	width: 75px;
 	float: left;
 }
 
-.student_info{
+.student_info, .instructor_info{
 	margin: -12px 0px 0px 84px;
 }
 
 
-.student_info h6{
+.student_info h6, .instructor_info h6{
 	margin: -4px 0px 0px 0px;
 	color: #aeaeae;
 }
 
 
-.student_description{
+.student_description, .instructor_description{
 	margin-top: 10px;
 }
 
@@ -472,7 +472,16 @@ footer h4{
 	padding: 5px;
 }
 
+div.contact_form input{
+	width: 350px;
+}
+
+div.contact_form textarea{
+	width: 600px;
+}
 
 
-
+#contact_info{
+	margin-top: 20px;
+}
 
