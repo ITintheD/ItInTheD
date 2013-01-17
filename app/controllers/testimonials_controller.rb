@@ -1,5 +1,6 @@
 class TestimonialsController < ApplicationController
   def index
+    @testimonials = Youtube.get_players("UC3sD2LbS9knGoDeANxiUbFw")
   end
 end
 

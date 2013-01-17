@@ -6,22 +6,23 @@ class Youtube
     result = HTTParty.get("https://gdata.youtube.com/feeds/api/users/#{user}/uploads?alt=json")
     json = ActiveSupport::JSON.decode(result.body)
 
-      array_of_players = [$title, $player]
+      array = []
 
       json["feed"]["entry"].each do |player|
 
-      #How to parse and regex the youtube video key
-      key = player["id"]["$t"].split("/").last
+        #How to parse and regex the youtube video key
+        key = player["id"]["$t"].split("/").last
 
-      #Use gem to access hash attibutes
-      video = VideoInfo.get("http://www.youtube.com/watch?v=#{key}")
+        #Use gem to access hash attibutes
+        video = VideoInfo.get("http://www.youtube.com/watch?v=#{key}")
+        iframe_src = "http://www.youtube.com/embed/#{key}?wmode=opaque;rel=0;showinfo=0;controls=0;autoplay=0"
+        #Load titles and players into and r
+        hash = {:title => video.title, :iframe_src => iframe_src}
 
-      #Load titles and players into and r
-      array_of_players = [ video.title, VideoInfo.get("http://www.youtube.com/watch?v=#{key}", :iframe_attributes => { :width => 470, :height => 315, :wmode => "opaque", :showinfo => 0, :controls => 0, "data-key" => "value" } ).embed_code]
-
+        array << hash
     end
 
-    return array_of_players
+    return array
   end
 end
 
