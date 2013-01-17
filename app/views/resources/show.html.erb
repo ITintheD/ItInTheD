@@ -23,7 +23,11 @@
 
 <% if current_user %>
   <% if current_user.user_type == "admin" %>
+<div id="linkcontainer2">
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
+</div>
   <% end %>
 <% end %>
-<%= link_to 'Back', resources_path %>
+<div id="linkcontainer3">
+  <%= link_to 'Back', resources_path %>
+</div>
