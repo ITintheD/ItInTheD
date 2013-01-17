@@ -27,7 +27,7 @@
     <td><%= organization.city %></td>
     <td><%= organization.org_state %></td>
     <td><%= organization.zip %></td>
-    <td><%= link_to organization.org_url, organization.org_url %></td>
+    <td id="linksponsor"><%= link_to organization.org_url, organization.org_url %></td>
     <td><%= organization.keyword_list %></td>
     <td id="showsponsor"><%= link_to 'Show', organization %></td>
     <td id="editsponsor"><%= link_to 'Edit', edit_organization_path(organization) %></td>
