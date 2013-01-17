@@ -21,6 +21,10 @@ gem 'jquery-rails'
 gem 'youtube_it'
 gem 'httparty'
 
+#Added this tiny gem for access to youtube and vimeo params
+#Parses with MultiJson
+gem 'video_info'
+
 
 #gem 'feedzirra'
 

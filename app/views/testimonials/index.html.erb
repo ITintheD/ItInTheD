@@ -1,20 +1,34 @@
 
-
 <h3>TESTIMONIALS</h3>
 
-<div id="testimonial_container" class='span5' style="margin-left:20px">
-    <div class="content_title"> <p>Testimonials</p> </div>
+
     <!--  <ul>!-->
       <!--<#% @entries.each do |entry| %>
         <li><#%= link_to entry.title, entry.url %></li>
       <#% end %>-->
     <!--  </ul>!-->
-  
-    <section>
-    <iframe width="480" height="270" src="http://www.youtube.com/embed/0_UAvAQCXMU?HD=1;wmode=opaque;rel=0;showinfo=0;controls=0;title=0" height="270" frameborder="4"></iframe>
-    </section>
+
+<%= testimonials = Youtube.get_players("UC3sD2LbS9knGoDeANxiUbFw")%>
+
+          
+<% testimonials.each do |testimonial| %>
+
+<div id="testimonial_container" class='span5' style="margin-left:0px">    
+    <div class="content_title"> <p><%= title%></p> </div>
+
+      <section>
+      <%= testimonial%>
+      </section>
+ 
 </div>
-   
+
+<div id="testimonial_container" class='span5' style="margin-left:20px">
+
+<% end %>
+
+    </div>
 
 <% $end %>
+
+
 
