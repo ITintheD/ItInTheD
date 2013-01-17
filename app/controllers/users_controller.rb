@@ -33,6 +33,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def instructors
+    @instructors = User.find(:all, :conditions => { :user_type => 'Instructor' })
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @users }
+    end
+  end
+
+
 
 
   def new
@@ -40,6 +50,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    raise
     @user = User.create(params[:user])
     redirect_to show_people_path(@user)
     
@@ -50,7 +61,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    raise
+
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
     redirect_to show_people_path(@user)
