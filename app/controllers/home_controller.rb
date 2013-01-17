@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  require 'feedzirra'
+  #require 'feedzirra'
   
   def index
     @title = 'IT in the D'

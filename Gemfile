@@ -5,7 +5,7 @@ gem 'devise'
 gem "paperclip", "~> 3.0"
 gem 'twitter'
 gem 'thin'
-gem 'feedzirra'
+#gem 'feedzirra'
 gem 'pony'
 
 
