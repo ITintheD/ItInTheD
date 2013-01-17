@@ -6,6 +6,7 @@ gem "paperclip", "~> 3.0"
 gem 'twitter'
 gem 'thin'
 gem 'feedzirra'
+gem 'pony'
 
 
 group :assets do
