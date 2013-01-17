@@ -1,0 +1,27 @@
+<h3 id="instructor">IT in The D Instructors</h3>
+
+
+<div id="instructor_container">
+
+<% @instructors.each do |user| %>
+
+
+
+	<div class="instructor_profile">
+	<%= image_tag user.avatar.url %>
+
+	<div class="instructors_info">
+		<h4><%= user.first_name %> <%= user.last_name %></h4>
+		<h6><%= user.city %>, <%= user.state %></h6>
+		<h6><%= user.email %></h6>	
+	</div>
+
+	<section class="instructor_description">
+	<%= user.summary%>
+	</section>
+	</div>
+
+
+
+<% end %>
+</div>
