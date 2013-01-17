@@ -394,14 +394,85 @@ footer h4{
 }
 
 
-#footer_program li, #team_nav li, #resources li, #community li, #apply li{
+#footer_program ul li, #team_nav ul li, #resources ul li, #community ul li, #apply ul li{
 	list-style: none;
 	height: 160;
 	font-family: 'Arial', sans-serif;
 	font-size: 14px;
+	list-style: none;
 }
 
 
 #footer_program li a, #team_nav li a, #resources li a, #community li a, #apply li a{
 	color: white;
 }
+
+
+
+
+
+
+#student{
+	color: #162d3f;
+}
+
+
+#student_container{
+	margin: 25px 0px 0px 0px;
+}
+
+
+.student_profile{
+	float: left;
+	width: 300px;
+	padding-right: 25px;
+
+}
+
+.student_profile img{
+	width: 75px;
+	float: left;
+}
+
+.student_info{
+	margin: -12px 0px 0px 84px;
+}
+
+
+.student_info h6{
+	margin: -4px 0px 0px 0px;
+	color: #aeaeae;
+}
+
+
+.student_description{
+	margin-top: 10px;
+}
+
+
+
+.news_article{
+	margin-bottom: 55px;
+}
+
+
+.news_title{
+	font-size: 16px;
+	margin: 4px 0 0 100px;
+	line-height: 21px;
+}
+
+.news_avatar{
+	float: left;
+}
+
+
+.news_avatar span{
+	border:thin solid #aeaeae;
+	padding: 5px;
+}
+
+
+
+
+
